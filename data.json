@@ -3,6 +3,7 @@
     "title": "ALTWORLD COMICS",
     "logo": "images/logo.png",
     "banner": "images/banner.png",
+    "amazonLink": "",
     "tagline": "Old tales. New adventures. Different worlds.",
     "intro": "AltWorld Comics reimagines public domain legends and creates original dark tales with a modern pulp spirit."
   },
@@ -28,7 +29,7 @@
     {
       "title": "Fantomah — Issue #0",
       "status": "Out Now",
-      "image": "images/fantomah0.jpg",
+      "image": "images/fantomah-issue-0-cover.png",
       "description": "A Golden Age jungle horror legend reborn for a new generation.",
       "button": "Read on Kindle",
       "link": "https://a.co/d/0bMFV2Oh"
@@ -36,7 +37,7 @@
     {
       "title": "Fantomah — Issue #1",
       "status": "Coming Soon",
-      "image": "images/fantomah1.jpg",
+      "image": "images/fantomah-issue-1-cover.png",
       "description": "The first full chapter of Fantomah's modern AltWorld Comics run.",
       "button": "Coming Soon",
       "link": "#"
@@ -44,7 +45,7 @@
     {
       "title": "Dark Tales: Little Red Riding Hood",
       "status": "Coming Soon",
-      "image": "images/dark-tales-red-riding-hood.jpg",
+      "image": "images/darktales-issue-1-cover.png",
       "description": "An original dark fantasy take on an old tale.",
       "button": "Coming Soon",
       "link": "#"
