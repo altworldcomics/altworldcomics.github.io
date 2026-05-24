@@ -1,1 +1,256 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>AltWorld Comics Admin</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>body{margin:0;background:#070705;color:#f4e9c7;font-family:Arial,sans-serif}main{width:min(1000px,92vw);margin:30px auto}h1{font-family:Georgia,serif;font-size:42px}textarea{width:100%;height:70vh;background:#111;color:#f4e9c7;border:1px solid #6b4b1e;border-radius:12px;padding:18px;font-family:monospace;font-size:14px}button{margin:18px 10px 0 0;background:#6f281d;color:#fff;border:1px solid #d7b85c;border-radius:999px;padding:12px 20px;font-weight:bold;cursor:pointer}.hint{color:#b8a982;line-height:1.6}</style></head><body><main><h1>AltWorld Comics Admin</h1><p class="hint">Edit JSON, download it as <b>data.json</b>, then upload/replace it in GitHub. Images must exist inside <b>images/</b>.</p><textarea id="jsonBox"></textarea><br><button onclick="downloadJson()">Download data.json</button><button onclick="formatJson()">Format JSON</button></main><script>async function load(){const r=await fetch("data.json",{cache:"no-store"});const d=await r.json();jsonBox.value=JSON.stringify(d,null,2)}function formatJson(){jsonBox.value=JSON.stringify(JSON.parse(jsonBox.value),null,2)}function downloadJson(){const blob=new Blob([JSON.stringify(JSON.parse(jsonBox.value),null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="data.json";a.click()}load();</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AltWorld Comics Admin</title>
+  <style>
+    :root {
+      --bg: #060604;
+      --panel: #11100d;
+      --panel-2: #17140f;
+      --gold: #d7b85c;
+      --cream: #f3e9cb;
+      --muted: #b8a982;
+      --line: #4b3516;
+      --red: #8f2b1f;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, rgba(92,62,20,.2), transparent 40%), var(--bg);
+      color: var(--cream);
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      padding: 22px 28px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(0,0,0,.5);
+    }
+
+    header h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      color: var(--muted);
+      margin: 8px 0 0;
+      line-height: 1.5;
+    }
+
+    main {
+      width: min(1200px, 94vw);
+      margin: 28px auto 60px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 22px;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.015));
+      border: 1px solid rgba(215,184,92,.35);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .panel h2 {
+      margin: 0 0 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    button {
+      cursor: pointer;
+      border: 1px solid rgba(215,184,92,.5);
+      background: rgba(143,43,31,.45);
+      color: var(--cream);
+      border-radius: 999px;
+      padding: 12px 16px;
+      font-weight: 800;
+      letter-spacing: .3px;
+    }
+
+    button.secondary {
+      background: rgba(215,184,92,.1);
+    }
+
+    .hint {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+      margin-top: 18px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 70vh;
+      resize: vertical;
+      background: #080807;
+      border: 1px solid rgba(215,184,92,.35);
+      border-radius: 14px;
+      color: var(--cream);
+      padding: 18px;
+      font-size: 14px;
+      line-height: 1.45;
+      font-family: Consolas, Monaco, "Courier New", monospace;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(215,184,92,.12);
+    }
+
+    .status {
+      margin-top: 14px;
+      color: var(--gold);
+      font-weight: 700;
+      min-height: 22px;
+    }
+
+    code {
+      color: var(--gold);
+      background: rgba(215,184,92,.09);
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 850px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      textarea {
+        min-height: 60vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AltWorld Comics Admin</h1>
+    <p>Edit <code>data.json</code>, download the updated file, then replace it in GitHub. Images must be uploaded manually into the <code>images/</code> folder.</p>
+  </header>
+
+  <main>
+    <aside class="panel">
+      <h2>Controls</h2>
+      <div class="buttons">
+        <button onclick="loadJson()">Reload data.json</button>
+        <button onclick="formatJson()" class="secondary">Format JSON</button>
+        <button onclick="validateJson()" class="secondary">Validate JSON</button>
+        <button onclick="downloadJson()">Download data.json</button>
+      </div>
+
+      <p class="hint">
+        Common image paths:<br>
+        <code>images/logo.png</code><br>
+        <code>images/banner.png</code><br>
+        <code>images/fantomah0.jpg</code><br>
+        <code>images/fantomah1.jpg</code><br>
+        <code>images/dark-tales-red-riding-hood.jpg</code>
+      </p>
+
+      <p class="hint">
+        After downloading, upload the new <code>data.json</code> to the repository root and commit changes.
+      </p>
+
+      <div id="status" class="status"></div>
+    </aside>
+
+    <section class="panel">
+      <h2>data.json</h2>
+      <textarea id="jsonBox" spellcheck="false"></textarea>
+    </section>
+  </main>
+
+  <script>
+    const jsonBox = document.getElementById("jsonBox");
+    const statusBox = document.getElementById("status");
+
+    function setStatus(message) {
+      statusBox.textContent = message;
+      window.clearTimeout(window.__statusTimer);
+      window.__statusTimer = window.setTimeout(() => {
+        statusBox.textContent = "";
+      }, 4500);
+    }
+
+    async function loadJson() {
+      try {
+        const response = await fetch("data.json?cache=" + Date.now());
+        if (!response.ok) {
+          throw new Error("data.json could not be loaded.");
+        }
+
+        const data = await response.json();
+        jsonBox.value = JSON.stringify(data, null, 2);
+        setStatus("Loaded data.json.");
+      } catch (error) {
+        jsonBox.value = "";
+        setStatus("Error: " + error.message);
+      }
+    }
+
+    function parseCurrentJson() {
+      return JSON.parse(jsonBox.value);
+    }
+
+    function formatJson() {
+      try {
+        const data = parseCurrentJson();
+        jsonBox.value = JSON.stringify(data, null, 2);
+        setStatus("JSON formatted.");
+      } catch (error) {
+        setStatus("Invalid JSON: " + error.message);
+      }
+    }
+
+    function validateJson() {
+      try {
+        parseCurrentJson();
+        setStatus("JSON is valid.");
+      } catch (error) {
+        setStatus("Invalid JSON: " + error.message);
+      }
+    }
+
+    function downloadJson() {
+      try {
+        const data = parseCurrentJson();
+        const pretty = JSON.stringify(data, null, 2);
+        const blob = new Blob([pretty], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "data.json";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+
+        URL.revokeObjectURL(url);
+        setStatus("Downloaded data.json.");
+      } catch (error) {
+        setStatus("Invalid JSON: " + error.message);
+      }
+    }
+
+    loadJson();
+  </script>
+</body>
+</html>
