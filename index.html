@@ -1,77 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AltWorld Comics</title>
-  <meta name="description" content="AltWorld Comics reimagines forgotten public domain legends as dark pulp, horror and retro comic stories." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="images/avatar.png" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AltWorld Comics</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#main" data-route="main" aria-label="AltWorld Comics home">
-      <img id="siteLogo" src="images/altworld-comics-logo.png" alt="AltWorld Comics logo" />
-      <span>AltWorld Comics</span>
-    </a>
-    <nav class="top-nav" aria-label="Primary navigation">
-      <a href="#main" data-route="main" class="active">Main Page</a>
-      <a href="#store" data-route="store">Store</a>
-      <a href="#about" data-route="about">About</a>
+
+<header class="topbar">
+    <div class="logo-area">
+        <img src="images/logo.png" class="logo">
+        <div class="brand">ALTWORLD COMICS</div>
+    </div>
+
+    <nav class="menu">
+        <a class="active">Main Page</a>
+        <a>Store</a>
+        <a>About</a>
     </nav>
-  </header>
+</header>
 
-  <main>
-    <section id="main" class="page active-page">
-      <div class="hero-banner-wrap">
-        <img id="heroBanner" class="hero-banner" src="images/banner.png" alt="AltWorld Comics banner" />
-      </div>
+<section class="hero">
+    <img src="images/banner.png" class="hero-banner">
+</section>
 
-      <section class="content-section">
-        <div class="section-heading">
-          <p class="eyebrow">Publisher log</p>
-          <h2>Main Page</h2>
+<section class="content">
+    <h2>Latest Releases</h2>
+
+    <div class="cards">
+        <div class="card">
+            <img src="images/fantomah.jpg">
+            <h3>Fantomah — Issue #0</h3>
+            <p>Dark jungle horror reborn for a new generation.</p>
         </div>
-        <div id="postGrid" class="card-grid"></div>
-      </section>
-    </section>
 
-    <section id="store" class="page">
-      <section class="content-section page-top">
-        <div class="section-heading">
-          <p class="eyebrow">Digital releases</p>
-          <h2>Store</h2>
-          <p class="section-copy">Read AltWorld Comics releases through Amazon Kindle.</p>
+        <div class="card">
+            <img src="images/redhood.jpg">
+            <h3>Dark Tales: Little Red Riding Hood</h3>
+            <p>Classic fairy tale horror reimagined.</p>
         </div>
-        <div id="storeGrid" class="store-grid"></div>
-      </section>
-    </section>
+    </div>
+</section>
 
-    <section id="about" class="page">
-      <section class="content-section page-top about-layout">
-        <div>
-          <p class="eyebrow">Who we are</p>
-          <h2 id="aboutTitle">About AltWorld Comics</h2>
-          <p id="aboutBody" class="about-body"></p>
-          <p class="contact-line">Contact: <a id="aboutContact" href="mailto:altworldcomics@example.com">altworldcomics@example.com</a></p>
-          <div class="social-links">
-            <a id="twitterLink" href="#" target="_blank" rel="noopener">X / Twitter</a>
-            <a id="instagramLink" href="#" target="_blank" rel="noopener">Instagram</a>
-          </div>
-        </div>
-        <img id="aboutImage" class="about-image" src="images/about-altworld-comics.jpg" alt="AltWorld Comics visual" />
-      </section>
-    </section>
-  </main>
-
-  <footer>
-    <span>© <span id="year"></span> AltWorld Comics</span>
-    <span>Forgotten legends reborn.</span>
-  </footer>
-
-  <script src="app.js"></script>
 </body>
 </html>
