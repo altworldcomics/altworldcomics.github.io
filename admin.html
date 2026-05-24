@@ -8,21 +8,20 @@
     :root {
       --bg: #060604;
       --panel: #11100d;
-      --panel-2: #17140f;
+      --panel2: #17140f;
       --gold: #d7b85c;
       --cream: #f3e9cb;
       --muted: #b8a982;
       --line: #4b3516;
       --red: #8f2b1f;
+      --green: #27351e;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      background: radial-gradient(circle at top, rgba(92,62,20,.2), transparent 40%), var(--bg);
+      background: radial-gradient(circle at top, rgba(92,62,20,.18), transparent 45%), var(--bg);
       color: var(--cream);
       font-family: Arial, sans-serif;
     }
@@ -30,7 +29,10 @@
     header {
       padding: 22px 28px;
       border-bottom: 1px solid var(--line);
-      background: rgba(0,0,0,.5);
+      background: rgba(0,0,0,.65);
+      position: sticky;
+      top: 0;
+      z-index: 20;
     }
 
     header h1 {
@@ -47,79 +49,155 @@
     }
 
     main {
-      width: min(1200px, 94vw);
-      margin: 28px auto 60px;
+      width: min(1300px, 94vw);
+      margin: 26px auto 70px;
       display: grid;
-      grid-template-columns: 320px 1fr;
+      grid-template-columns: 260px 1fr;
       gap: 22px;
     }
 
-    .panel {
+    aside, section.panel {
       background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.015));
       border: 1px solid rgba(215,184,92,.35);
       border-radius: 16px;
       padding: 18px;
     }
 
-    .panel h2 {
-      margin: 0 0 14px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 24px;
+    aside {
+      height: fit-content;
+      position: sticky;
+      top: 116px;
     }
 
-    .buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    button {
+    .navbtn, button {
+      width: 100%;
       cursor: pointer;
-      border: 1px solid rgba(215,184,92,.5);
-      background: rgba(143,43,31,.45);
+      border: 1px solid rgba(215,184,92,.45);
+      background: rgba(215,184,92,.08);
       color: var(--cream);
       border-radius: 999px;
-      padding: 12px 16px;
+      padding: 12px 15px;
       font-weight: 800;
-      letter-spacing: .3px;
+      margin-bottom: 10px;
     }
 
-    button.secondary {
-      background: rgba(215,184,92,.1);
+    .navbtn.active {
+      background: rgba(143,43,31,.55);
+      color: #fff;
+    }
+
+    .actions {
+      margin-top: 22px;
+      border-top: 1px solid rgba(215,184,92,.25);
+      padding-top: 16px;
+    }
+
+    .danger { background: rgba(120,30,20,.65); }
+    .success { background: rgba(45,80,35,.7); }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      margin: 0 0 18px;
+    }
+
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+      margin: 22px 0 12px;
+      color: var(--gold);
+    }
+
+    .tab { display: none; }
+    .tab.active { display: block; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    label {
+      display: block;
+      color: var(--muted);
+      font-weight: 700;
+      margin: 0 0 6px;
+      font-size: 14px;
+    }
+
+    input, textarea {
+      width: 100%;
+      background: #080807;
+      color: var(--cream);
+      border: 1px solid rgba(215,184,92,.35);
+      border-radius: 10px;
+      padding: 11px 12px;
+      outline: none;
+      font-size: 15px;
+      font-family: Arial, sans-serif;
+    }
+
+    textarea {
+      min-height: 105px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+
+    input:focus, textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(215,184,92,.12);
+    }
+
+    .full { grid-column: 1 / -1; }
+
+    .item {
+      border: 1px solid rgba(215,184,92,.25);
+      background: rgba(0,0,0,.22);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .item-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .item-title {
+      font-weight: 900;
+      color: var(--gold);
+      font-size: 16px;
+    }
+
+    .mini-actions {
+      display: flex;
+      gap: 8px;
+      width: auto;
+    }
+
+    .mini-actions button {
+      width: auto;
+      margin: 0;
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+
+    .status {
+      color: var(--gold);
+      min-height: 22px;
+      font-weight: 800;
+      margin-top: 12px;
+      line-height: 1.45;
     }
 
     .hint {
       color: var(--muted);
       font-size: 14px;
-      line-height: 1.55;
-      margin-top: 18px;
-    }
-
-    textarea {
-      width: 100%;
-      min-height: 70vh;
-      resize: vertical;
-      background: #080807;
-      border: 1px solid rgba(215,184,92,.35);
-      border-radius: 14px;
-      color: var(--cream);
-      padding: 18px;
-      font-size: 14px;
-      line-height: 1.45;
-      font-family: Consolas, Monaco, "Courier New", monospace;
-      outline: none;
-    }
-
-    textarea:focus {
-      border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(215,184,92,.12);
-    }
-
-    .status {
+      line-height: 1.6;
       margin-top: 14px;
-      color: var(--gold);
-      font-weight: 700;
-      min-height: 22px;
     }
 
     code {
@@ -129,128 +207,420 @@
       border-radius: 6px;
     }
 
-    @media (max-width: 850px) {
-      main {
-        grid-template-columns: 1fr;
-      }
+    .json-preview {
+      width: 100%;
+      min-height: 440px;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 13px;
+      line-height: 1.45;
+    }
 
-      textarea {
-        min-height: 60vh;
-      }
+    @media (max-width: 900px) {
+      main { grid-template-columns: 1fr; }
+      aside { position: static; }
+      .grid { grid-template-columns: 1fr; }
+      .full { grid-column: auto; }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>AltWorld Comics Admin</h1>
-    <p>Edit <code>data.json</code>, download the updated file, then replace it in GitHub. Images must be uploaded manually into the <code>images/</code> folder.</p>
+    <p>Formları düzenle, sonra <code>Download data.json</code> ile dosyayı indirip GitHub’daki eski <code>data.json</code> üzerine yükle.</p>
   </header>
 
   <main>
-    <aside class="panel">
-      <h2>Controls</h2>
-      <div class="buttons">
+    <aside>
+      <button class="navbtn active" data-tab="site">Site Settings</button>
+      <button class="navbtn" data-tab="posts">Main Page / Blog</button>
+      <button class="navbtn" data-tab="store">Store</button>
+      <button class="navbtn" data-tab="about">About</button>
+      <button class="navbtn" data-tab="json">JSON Preview</button>
+
+      <div class="actions">
         <button onclick="loadJson()">Reload data.json</button>
-        <button onclick="formatJson()" class="secondary">Format JSON</button>
-        <button onclick="validateJson()" class="secondary">Validate JSON</button>
-        <button onclick="downloadJson()">Download data.json</button>
+        <button class="success" onclick="downloadJson()">Download data.json</button>
       </div>
 
       <p class="hint">
-        Common image paths:<br>
-        <code>images/logo.png</code><br>
-        <code>images/banner.png</code><br>
-        <code>images/fantomah0.jpg</code><br>
-        <code>images/fantomah1.jpg</code><br>
-        <code>images/dark-tales-red-riding-hood.jpg</code>
-      </p>
-
-      <p class="hint">
-        After downloading, upload the new <code>data.json</code> to the repository root and commit changes.
+        Görselleri ayrıca <code>images/</code> klasörüne yüklemelisin. Burada sadece yol yazıyoruz.
       </p>
 
       <div id="status" class="status"></div>
     </aside>
 
     <section class="panel">
-      <h2>data.json</h2>
-      <textarea id="jsonBox" spellcheck="false"></textarea>
+      <div id="tab-site" class="tab active">
+        <h2>Site Settings</h2>
+        <div class="grid">
+          <div>
+            <label>Site Title</label>
+            <input id="site-title" placeholder="ALTWORLD COMICS">
+          </div>
+          <div>
+            <label>Logo Path</label>
+            <input id="site-logo" placeholder="images/logo.png">
+          </div>
+          <div>
+            <label>Banner Path</label>
+            <input id="site-banner" placeholder="images/banner.png">
+          </div>
+          <div>
+            <label>Amazon / Main Link</label>
+            <input id="site-amazon" placeholder="https://a.co/...">
+          </div>
+          <div class="full">
+            <label>Tagline</label>
+            <input id="site-tagline" placeholder="Old tales. New adventures. Different worlds.">
+          </div>
+          <div class="full">
+            <label>Intro Text</label>
+            <textarea id="site-intro"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-posts" class="tab">
+        <h2>Main Page / Blog</h2>
+        <div id="posts-list"></div>
+        <button class="success" onclick="addPost()">Add Blog Post</button>
+      </div>
+
+      <div id="tab-store" class="tab">
+        <h2>Store</h2>
+        <div id="store-list"></div>
+        <button class="success" onclick="addStoreItem()">Add Store Item</button>
+      </div>
+
+      <div id="tab-about" class="tab">
+        <h2>About</h2>
+        <div class="grid">
+          <div class="full">
+            <label>Heading</label>
+            <input id="about-heading">
+          </div>
+          <div class="full">
+            <label>Body</label>
+            <textarea id="about-body"></textarea>
+          </div>
+          <div>
+            <label>Contact</label>
+            <input id="about-contact">
+          </div>
+          <div>
+            <label>X / Twitter Link</label>
+            <input id="about-x">
+          </div>
+          <div>
+            <label>Instagram Link</label>
+            <input id="about-instagram">
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-json" class="tab">
+        <h2>JSON Preview</h2>
+        <p class="hint">Burayı elle de düzenleyebilirsin. “Apply JSON to Forms” dersen formlara geri işler.</p>
+        <textarea id="json-preview" class="json-preview"></textarea>
+        <br><br>
+        <button onclick="applyJsonPreview()">Apply JSON to Forms</button>
+        <button onclick="refreshJsonPreview()">Refresh Preview</button>
+      </div>
     </section>
   </main>
 
-  <script>
-    const jsonBox = document.getElementById("jsonBox");
-    const statusBox = document.getElementById("status");
+<script>
+let data = {
+  site: {},
+  posts: [],
+  store: [],
+  about: {}
+};
 
-    function setStatus(message) {
-      statusBox.textContent = message;
-      window.clearTimeout(window.__statusTimer);
-      window.__statusTimer = window.setTimeout(() => {
-        statusBox.textContent = "";
-      }, 4500);
-    }
+const $ = (id) => document.getElementById(id);
+const statusBox = $("status");
 
-    async function loadJson() {
-      try {
-        const response = await fetch("data.json?cache=" + Date.now());
-        if (!response.ok) {
-          throw new Error("data.json could not be loaded.");
-        }
+function setStatus(message) {
+  statusBox.textContent = message;
+  clearTimeout(window.__statusTimer);
+  window.__statusTimer = setTimeout(() => statusBox.textContent = "", 4500);
+}
 
-        const data = await response.json();
-        jsonBox.value = JSON.stringify(data, null, 2);
-        setStatus("Loaded data.json.");
-      } catch (error) {
-        jsonBox.value = "";
-        setStatus("Error: " + error.message);
-      }
-    }
+function value(id) {
+  return $(id).value.trim();
+}
 
-    function parseCurrentJson() {
-      return JSON.parse(jsonBox.value);
-    }
+function setValue(id, val) {
+  $(id).value = val || "";
+}
 
-    function formatJson() {
-      try {
-        const data = parseCurrentJson();
-        jsonBox.value = JSON.stringify(data, null, 2);
-        setStatus("JSON formatted.");
-      } catch (error) {
-        setStatus("Invalid JSON: " + error.message);
-      }
-    }
+async function loadJson() {
+  try {
+    const res = await fetch("data.json?cache=" + Date.now());
+    if (!res.ok) throw new Error("data.json could not be loaded.");
+    data = await res.json();
+    renderForms();
+    setStatus("data.json loaded.");
+  } catch (err) {
+    setStatus("Error: " + err.message);
+  }
+}
 
-    function validateJson() {
-      try {
-        parseCurrentJson();
-        setStatus("JSON is valid.");
-      } catch (error) {
-        setStatus("Invalid JSON: " + error.message);
-      }
-    }
+function collectForms() {
+  data.site = {
+    title: value("site-title"),
+    logo: value("site-logo"),
+    banner: value("site-banner"),
+    amazonLink: value("site-amazon"),
+    tagline: value("site-tagline"),
+    intro: value("site-intro")
+  };
 
-    function downloadJson() {
-      try {
-        const data = parseCurrentJson();
-        const pretty = JSON.stringify(data, null, 2);
-        const blob = new Blob([pretty], { type: "application/json" });
-        const url = URL.createObjectURL(blob);
+  data.posts = [...document.querySelectorAll(".post-item")].map(item => ({
+    title: item.querySelector(".post-title").value.trim(),
+    date: item.querySelector(".post-date").value.trim(),
+    image: item.querySelector(".post-image").value.trim(),
+    excerpt: item.querySelector(".post-excerpt").value.trim(),
+    linkText: item.querySelector(".post-linkText").value.trim(),
+    link: item.querySelector(".post-link").value.trim()
+  }));
 
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = "data.json";
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
+  data.store = [...document.querySelectorAll(".store-item")].map(item => ({
+    title: item.querySelector(".store-title").value.trim(),
+    status: item.querySelector(".store-status").value.trim(),
+    image: item.querySelector(".store-image").value.trim(),
+    description: item.querySelector(".store-description").value.trim(),
+    button: item.querySelector(".store-button").value.trim(),
+    link: item.querySelector(".store-link").value.trim()
+  }));
 
-        URL.revokeObjectURL(url);
-        setStatus("Downloaded data.json.");
-      } catch (error) {
-        setStatus("Invalid JSON: " + error.message);
-      }
-    }
+  data.about = {
+    heading: value("about-heading"),
+    body: value("about-body"),
+    contact: value("about-contact"),
+    x: value("about-x"),
+    instagram: value("about-instagram")
+  };
 
-    loadJson();
-  </script>
+  refreshJsonPreview(false);
+  return data;
+}
+
+function renderForms() {
+  const s = data.site || {};
+  setValue("site-title", s.title);
+  setValue("site-logo", s.logo);
+  setValue("site-banner", s.banner);
+  setValue("site-amazon", s.amazonLink);
+  setValue("site-tagline", s.tagline);
+  setValue("site-intro", s.intro);
+
+  renderPosts();
+  renderStore();
+
+  const a = data.about || {};
+  setValue("about-heading", a.heading);
+  setValue("about-body", a.body);
+  setValue("about-contact", a.contact);
+  setValue("about-x", a.x);
+  setValue("about-instagram", a.instagram);
+
+  refreshJsonPreview(false);
+}
+
+function postTemplate(post = {}, index = 0) {
+  return `
+    <div class="item post-item">
+      <div class="item-head">
+        <div class="item-title">Blog Post #${index + 1}</div>
+        <div class="mini-actions">
+          <button onclick="moveItem(this, 'up')">Up</button>
+          <button onclick="moveItem(this, 'down')">Down</button>
+          <button class="danger" onclick="removeItem(this)">Remove</button>
+        </div>
+      </div>
+      <div class="grid">
+        <div>
+          <label>Title</label>
+          <input class="post-title" value="${escapeHtml(post.title || "")}">
+        </div>
+        <div>
+          <label>Date</label>
+          <input class="post-date" value="${escapeHtml(post.date || "")}">
+        </div>
+        <div>
+          <label>Image Path</label>
+          <input class="post-image" value="${escapeHtml(post.image || "")}">
+        </div>
+        <div>
+          <label>Button Text</label>
+          <input class="post-linkText" value="${escapeHtml(post.linkText || "")}">
+        </div>
+        <div class="full">
+          <label>Excerpt</label>
+          <textarea class="post-excerpt">${escapeHtml(post.excerpt || "")}</textarea>
+        </div>
+        <div class="full">
+          <label>Link</label>
+          <input class="post-link" value="${escapeHtml(post.link || "")}">
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function storeTemplate(item = {}, index = 0) {
+  return `
+    <div class="item store-item">
+      <div class="item-head">
+        <div class="item-title">Store Item #${index + 1}</div>
+        <div class="mini-actions">
+          <button onclick="moveItem(this, 'up')">Up</button>
+          <button onclick="moveItem(this, 'down')">Down</button>
+          <button class="danger" onclick="removeItem(this)">Remove</button>
+        </div>
+      </div>
+      <div class="grid">
+        <div>
+          <label>Title</label>
+          <input class="store-title" value="${escapeHtml(item.title || "")}">
+        </div>
+        <div>
+          <label>Status</label>
+          <input class="store-status" value="${escapeHtml(item.status || "")}">
+        </div>
+        <div>
+          <label>Image Path</label>
+          <input class="store-image" value="${escapeHtml(item.image || "")}">
+        </div>
+        <div>
+          <label>Button Text</label>
+          <input class="store-button" value="${escapeHtml(item.button || "")}">
+        </div>
+        <div class="full">
+          <label>Description</label>
+          <textarea class="store-description">${escapeHtml(item.description || "")}</textarea>
+        </div>
+        <div class="full">
+          <label>Link</label>
+          <input class="store-link" value="${escapeHtml(item.link || "")}">
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderPosts() {
+  $("posts-list").innerHTML = (data.posts || []).map(postTemplate).join("");
+}
+
+function renderStore() {
+  $("store-list").innerHTML = (data.store || []).map(storeTemplate).join("");
+}
+
+function addPost() {
+  collectForms();
+  data.posts.push({
+    title: "New Blog Post",
+    date: "",
+    image: "images/banner.png",
+    excerpt: "",
+    linkText: "Read More",
+    link: "#"
+  });
+  renderForms();
+  setStatus("Blog post added.");
+}
+
+function addStoreItem() {
+  collectForms();
+  data.store.push({
+    title: "New Comic",
+    status: "Coming Soon",
+    image: "images/new-comic.jpg",
+    description: "",
+    button: "Coming Soon",
+    link: "#"
+  });
+  renderForms();
+  setStatus("Store item added.");
+}
+
+function removeItem(button) {
+  button.closest(".item").remove();
+  collectForms();
+  renderForms();
+  setStatus("Item removed.");
+}
+
+function moveItem(button, direction) {
+  const item = button.closest(".item");
+  if (direction === "up" && item.previousElementSibling) {
+    item.parentNode.insertBefore(item, item.previousElementSibling);
+  }
+  if (direction === "down" && item.nextElementSibling) {
+    item.parentNode.insertBefore(item.nextElementSibling, item);
+  }
+  collectForms();
+  renderForms();
+}
+
+function refreshJsonPreview(collect = true) {
+  if (collect) collectForms();
+  $("json-preview").value = JSON.stringify(data, null, 2);
+}
+
+function applyJsonPreview() {
+  try {
+    data = JSON.parse($("json-preview").value);
+    renderForms();
+    setStatus("JSON applied to forms.");
+  } catch (err) {
+    setStatus("Invalid JSON: " + err.message);
+  }
+}
+
+function downloadJson() {
+  try {
+    collectForms();
+    const pretty = JSON.stringify(data, null, 2);
+    const blob = new Blob([pretty], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "data.json";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    URL.revokeObjectURL(url);
+    setStatus("data.json downloaded.");
+  } catch (err) {
+    setStatus("Error: " + err.message);
+  }
+}
+
+function escapeHtml(str) {
+  return String(str)
+    .replaceAll("&", "&amp;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
+}
+
+document.querySelectorAll(".navbtn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    collectForms();
+    document.querySelectorAll(".navbtn").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+    btn.classList.add("active");
+    $("tab-" + btn.dataset.tab).classList.add("active");
+    if (btn.dataset.tab === "json") refreshJsonPreview();
+  });
+});
+
+loadJson();
+</script>
 </body>
 </html>
