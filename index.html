@@ -1,47 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>AltWorld Comics</title>
-<link rel="stylesheet" href="styles.css">
+<meta name="description" content="AltWorld Comics — dark pulp, horror, retro comics and original dark tales." />
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
 <header class="topbar">
-    <div class="logo-area">
-        <img src="images/logo.png" class="logo">
-        <div class="brand">ALTWORLD COMICS</div>
-    </div>
-
-    <nav class="menu">
-        <a class="active">Main Page</a>
-        <a>Store</a>
-        <a>About</a>
-    </nav>
+  <a class="brand-wrap" href="#main" data-tab="main">
+    <img id="siteLogo" class="site-logo" src="images/logo.png" alt="AltWorld Comics logo" />
+    <span id="siteTitle">ALTWORLD COMICS</span>
+  </a>
+  <nav class="nav">
+    <button class="nav-link active" data-tab="main">Main Page</button>
+    <button class="nav-link" data-tab="store">Store</button>
+    <button class="nav-link" data-tab="about">About</button>
+  </nav>
 </header>
 
-<section class="hero">
-    <img src="images/banner.png" class="hero-banner">
-</section>
-
-<section class="content">
-    <h2>Latest Releases</h2>
-
-    <div class="cards">
-        <div class="card">
-            <img src="images/fantomah.jpg">
-            <h3>Fantomah — Issue #0</h3>
-            <p>Dark jungle horror reborn for a new generation.</p>
-        </div>
-
-        <div class="card">
-            <img src="images/redhood.jpg">
-            <h3>Dark Tales: Little Red Riding Hood</h3>
-            <p>Classic fairy tale horror reimagined.</p>
-        </div>
+<main>
+<section id="main" class="page-section active-section">
+  <section class="hero-strip">
+    <img id="heroBanner" src="images/banner.png" alt="AltWorld Comics banner" />
+  </section>
+  <section class="intro-panel">
+    <p id="siteTagline" class="kicker">Old tales. New adventures. Different worlds.</p>
+    <h1>Publisher Log</h1>
+    <p id="siteIntro"></p>
+  </section>
+  <section class="content-wrap">
+    <div class="section-title">
+      <p>Publisher Log</p>
+      <h2>Main Page</h2>
     </div>
+    <div id="postsGrid" class="grid"></div>
+  </section>
 </section>
 
+<section id="store" class="page-section">
+  <section class="content-wrap page-top">
+    <div class="section-title">
+      <p>Digital Releases</p>
+      <h2>Store</h2>
+    </div>
+    <div id="storeGrid" class="grid store-grid"></div>
+  </section>
+</section>
+
+<section id="about" class="page-section">
+  <section class="content-wrap page-top">
+    <div class="section-title">
+      <p>Who We Are</p>
+      <h2 id="aboutHeading">About AltWorld Comics</h2>
+    </div>
+    <article class="about-card">
+      <p id="aboutBody"></p>
+      <div class="about-links">
+        <a id="aboutX" href="#" target="_blank" rel="noopener">X / Twitter</a>
+        <a id="aboutInstagram" href="#" target="_blank" rel="noopener">Instagram</a>
+        <span id="aboutContact"></span>
+      </div>
+    </article>
+  </section>
+</section>
+</main>
+
+<footer>
+  <span>ALTWORLD COMICS</span>
+  <span>Old tales. New adventures.</span>
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>

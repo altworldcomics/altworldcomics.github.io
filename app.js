@@ -1,88 +1,11 @@
-const state = { data: null };
-
-async function loadData(){
-  const response = await fetch('data.json', { cache: 'no-store' });
-  state.data = await response.json();
-  renderSite();
-}
-
-function $(selector){ return document.querySelector(selector); }
-function el(tag, className, html){
-  const node = document.createElement(tag);
-  if(className) node.className = className;
-  if(html !== undefined) node.innerHTML = html;
-  return node;
-}
-function safeText(value){ return String(value || ''); }
-function setImage(node, src, fallback){ node.src = src || fallback; }
-
-function renderSite(){
-  const { site, posts, store, about } = state.data;
-  document.title = site.title || 'AltWorld Comics';
-  $('#siteLogo').src = site.logo || 'images/logo.png';
-  $('#heroBanner').src = site.heroImage || 'images/banner.png';
-  $('#twitterLink').href = site.twitter || '#';
-  $('#instagramLink').href = site.instagram || '#';
-
-  const postGrid = $('#postGrid');
-  postGrid.innerHTML = '';
-  [...(posts || [])]
-    .sort((a,b)=> String(b.date).localeCompare(String(a.date)))
-    .forEach(post => {
-      const card = el('article', 'card');
-      card.innerHTML = `
-        <img src="${safeText(post.image)}" alt="${safeText(post.title)}">
-        <div class="card-content">
-          <p class="date">${safeText(post.date)}</p>
-          <h3>${safeText(post.title)}</h3>
-          <p>${safeText(post.excerpt || post.body)}</p>
-          ${post.buttonUrl ? `<a class="small-button" href="${safeText(post.buttonUrl)}" target="_blank" rel="noopener">${safeText(post.buttonText || 'Read more')}</a>` : ''}
-        </div>`;
-      postGrid.appendChild(card);
-    });
-
-  const storeGrid = $('#storeGrid');
-  storeGrid.innerHTML = '';
-  (store || []).forEach(item => {
-    const card = el('article', 'store-card');
-    const isDisabled = !item.buttonUrl || item.buttonUrl === '#';
-    card.innerHTML = `
-      <img src="${safeText(item.cover)}" alt="${safeText(item.title)} cover">
-      <p class="status">${safeText(item.status)}</p>
-      <h3>${safeText(item.title)}</h3>
-      <p><strong>${safeText(item.subtitle)}</strong></p>
-      <p>${safeText(item.description)}</p>
-      <a class="small-button" href="${isDisabled ? '#' : safeText(item.buttonUrl)}" ${isDisabled ? '' : 'target="_blank" rel="noopener"'}>${safeText(item.buttonText || 'Read on Kindle')}</a>`;
-    storeGrid.appendChild(card);
-  });
-
-  $('#aboutTitle').textContent = about?.title || 'About AltWorld Comics';
-  $('#aboutBody').textContent = about?.body || '';
-  $('#aboutContact').textContent = about?.contact || '';
-  $('#aboutContact').href = `mailto:${about?.contact || ''}`;
-  setImage($('#aboutImage'), about?.image, 'images/about-altworld-comics.jpg');
-  $('#year').textContent = new Date().getFullYear();
-}
-
-function setRoute(route){
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
-  document.querySelectorAll('.top-nav a').forEach(a => a.classList.remove('active'));
-  const page = document.getElementById(route) || document.getElementById('main');
-  page.classList.add('active-page');
-  document.querySelectorAll(`[data-route="${route}"]`).forEach(a => a.classList.add('active'));
-}
-
-document.addEventListener('click', e => {
-  const link = e.target.closest('[data-route]');
-  if(!link) return;
-  e.preventDefault();
-  const route = link.dataset.route;
-  history.pushState(null, '', `#${route}`);
-  setRoute(route);
-});
-window.addEventListener('popstate', () => setRoute(location.hash.replace('#','') || 'main'));
-
-loadData().then(() => setRoute(location.hash.replace('#','') || 'main')).catch(err => {
-  console.error(err);
-  document.body.insertAdjacentHTML('afterbegin', '<div style="padding:16px;background:#5b1010;color:white">data.json could not be loaded. Check file path and JSON format.</div>');
-});
+let siteData=null;const fallbackImg="images/banner.png";
+async function loadData(){try{const res=await fetch("data.json",{cache:"no-store"});siteData=await res.json()}catch(e){console.error(e);siteData={site:{},posts:[],store:[],about:{}}}renderSite();bindTabs()}
+function safe(v,f=""){return v||f}
+function setImage(id,src){const el=document.getElementById(id);if(el&&src)el.src=src}
+function renderSite(){const s=siteData.site||{};document.title=safe(s.title,"AltWorld Comics");document.getElementById("siteTitle").textContent=safe(s.title,"ALTWORLD COMICS");document.getElementById("siteTagline").textContent=safe(s.tagline,"Old tales. New adventures.");document.getElementById("siteIntro").textContent=safe(s.intro,"");setImage("siteLogo",safe(s.logo,"images/logo.png"));setImage("heroBanner",safe(s.banner,"images/banner.png"));renderPosts(siteData.posts||[]);renderStore(siteData.store||[]);renderAbout(siteData.about||{})}
+function renderPosts(posts){document.getElementById("postsGrid").innerHTML=posts.map(p=>`<article class="card"><img class="card-img" src="${safe(p.image,fallbackImg)}" alt="${safe(p.title,"AltWorld Comics post")}" onerror="this.src='${fallbackImg}'"><div class="card-body"><div class="card-date">${safe(p.date,"")}</div><h3>${safe(p.title,"")}</h3><p>${safe(p.excerpt,"")}</p>${p.link?`<a class="btn" href="${p.link}" target="${p.link.startsWith("#")?"_self":"_blank"}" rel="noopener">${safe(p.linkText,"Read More")}</a>`:""}</div></article>`).join("")}
+function renderStore(items){document.getElementById("storeGrid").innerHTML=items.map(i=>`<article class="card"><img class="card-img" src="${safe(i.image,fallbackImg)}" alt="${safe(i.title,"AltWorld Comics release")}" onerror="this.src='${fallbackImg}'"><div class="card-body"><div class="card-status">${safe(i.status,"")}</div><h3>${safe(i.title,"")}</h3><p>${safe(i.description,"")}</p>${i.link&&i.link!=="#"?`<a class="btn" href="${i.link}" target="_blank" rel="noopener">${safe(i.button,"Open")}</a>`:`<span class="btn">${safe(i.button,"Coming Soon")}</span>`}</div></article>`).join("")}
+function renderAbout(a){document.getElementById("aboutHeading").textContent=safe(a.heading,"About AltWorld Comics");document.getElementById("aboutBody").textContent=safe(a.body,"");document.getElementById("aboutContact").textContent=safe(a.contact,"");document.getElementById("aboutX").href=safe(a.x,"#");document.getElementById("aboutInstagram").href=safe(a.instagram,"#")}
+function bindTabs(){document.querySelectorAll("[data-tab]").forEach(b=>{b.addEventListener("click",e=>{e.preventDefault();showTab(b.dataset.tab)})});if(location.hash){const t=location.hash.replace("#","");if(document.getElementById(t))showTab(t)}}
+function showTab(t){document.querySelectorAll(".page-section").forEach(s=>s.classList.remove("active-section"));document.querySelectorAll(".nav-link").forEach(l=>l.classList.remove("active"));document.getElementById(t)?.classList.add("active-section");document.querySelector(`.nav-link[data-tab="${t}"]`)?.classList.add("active");history.replaceState(null,"",`#${t}`);window.scrollTo({top:0,behavior:"smooth"})}
+loadData();
