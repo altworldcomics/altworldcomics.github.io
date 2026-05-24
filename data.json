@@ -1,21 +1,21 @@
 {
   "site": {
     "title": "AltWorld Comics",
-    "logo": "images/altworld-comics-logo.png",
-    "heroImage": "images/fantomah-hero.jpg",
+    "logo": "images/logo.png",
+    "heroImage": "images/banner.png",
     "tagline": "Forgotten worlds return.",
     "intro": "AltWorld Comics reimagines forgotten public domain legends as dark pulp, horror and retro comic stories for a new generation.",
     "primaryButtonText": "Read Fantomah on Kindle",
     "primaryButtonUrl": "https://a.co/d/0bMFV2Oh",
     "instagram": "https://www.instagram.com/altworldcomics/",
-    "twitter": "https://x.com/altworldcomics"
+    "twitter": "https://x.com/altworldcomix"
   },
   "posts": [
     {
       "id": "fantomah-issue-0-release",
       "title": "Fantomah Issue #0 is now available",
       "date": "2026-05-24",
-      "image": "images/fantomah-issue-0-cover.jpg",
+      "image": "images/fantomah-issue-0-cover.png",
       "excerpt": "A Golden Age jungle horror icon returns in a modern dark pulp reimagining.",
       "body": "Fantomah returns as the first release from AltWorld Comics. Issue #0 introduces the tone of the line: forgotten legends, dark pulp atmosphere, supernatural horror and vintage comic DNA rebuilt for a new generation.",
       "buttonText": "Read on Kindle",
@@ -25,11 +25,11 @@
       "id": "from-1940-to-2026",
       "title": "From 1940 to 2026",
       "date": "2026-05-25",
-      "image": "images/from-1940-to-2026.jpg",
+      "image": "images/banner.png",
       "excerpt": "The old pulp energy survives — rebuilt with a darker, cinematic comic language.",
-      "body": "AltWorld Comics is built around the idea of rediscovering public domain legends and giving them a modern visual identity. Fantomah is only the beginning.",
+      "body": "AltWorld Comics is built around rediscovering public domain legends and giving them a modern visual identity. Fantomah is only the beginning.",
       "buttonText": "Follow the project",
-      "buttonUrl": "https://x.com/altworldcomics"
+      "buttonUrl": "https://x.com/altworldcomix"
     }
   ],
   "store": [
@@ -37,7 +37,7 @@
       "id": "fantomah-issue-0",
       "title": "Fantomah — Issue #0",
       "subtitle": "A Golden Age legend reborn.",
-      "cover": "images/fantomah-issue-0-cover.jpg",
+      "cover": "images/fantomah-issue-0-cover.png",
       "description": "Dark pulp. Supernatural terror. Vintage comic DNA rebuilt for 2026.",
       "status": "Available now",
       "buttonText": "Read on Kindle",
@@ -47,7 +47,7 @@
       "id": "fantomah-issue-1",
       "title": "Fantomah — Issue #1",
       "subtitle": "The jungle remembers.",
-      "cover": "images/fantomah-issue-1-cover.jpg",
+      "cover": "images/banner.png",
       "description": "The next chapter of AltWorld Comics' dark jungle horror line.",
       "status": "Coming soon",
       "buttonText": "Coming soon",
@@ -57,7 +57,7 @@
       "id": "dark-tales-little-red",
       "title": "Dark Tales — Little Red Riding Hood",
       "subtitle": "A fairy tale rewritten in blood and shadow.",
-      "cover": "images/dark-tales-little-red-cover.jpg",
+      "cover": "images/banner.png",
       "description": "The first entry in AltWorld Comics' dark fairy tale anthology line.",
       "status": "Coming soon",
       "buttonText": "Coming soon",
@@ -66,7 +66,7 @@
   ],
   "about": {
     "title": "About AltWorld Comics",
-    "image": "images/about-altworld-comics.jpg",
+    "image": "images/about-altworld-comics.png",
     "body": "AltWorld Comics is a dark pulp comic label focused on reimagining forgotten public domain legends, horror icons and retro comic worlds. Our stories blend vintage comic DNA with modern cinematic visuals, supernatural atmosphere and indie publisher energy.",
     "contact": "altworldcomics@example.com"
   }
