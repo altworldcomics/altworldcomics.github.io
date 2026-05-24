@@ -9,22 +9,12 @@
   },
   "posts": [
     {
-      "title": "Fantomah — Issue #0 Released",
-      "date": "2026-05-24",
-      "image": "images/fantomah0.jpg",
-      "excerpt": "The mystery woman of the jungle returns in a modern dark pulp reimagining.",
-      "linkText": "Read on Kindle",
-      "link": "https://a.co/d/0bMFV2Oh",
-      "body": "The mystery woman of the jungle returns in a modern dark pulp reimagining."
-    },
-    {
-      "title": "Old Tales. New Adventures.",
+      "title": "What Is AltWorld Comics?",
       "date": "2026-05-25",
       "image": "images/banner.png",
-      "excerpt": "AltWorld Comics blends classic pulp spirit with new dark fantasy and horror stories.",
-      "linkText": "Explore Store",
-      "link": "#store",
-      "body": "AltWorld Comics blends classic pulp spirit with new dark fantasy and horror stories."
+      "excerpt": "AltWorld Comics is a dark pulp and retro fantasy comic label focused on forgotten legends, twisted tales and modern mythmaking.",
+      "linkText": "Read More",
+      "link": "#"
     }
   ],
   "store": [
