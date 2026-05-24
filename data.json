@@ -14,7 +14,8 @@
       "image": "images/fantomah0.jpg",
       "excerpt": "The mystery woman of the jungle returns in a modern dark pulp reimagining.",
       "linkText": "Read on Kindle",
-      "link": "https://a.co/d/0bMFV2Oh"
+      "link": "https://a.co/d/0bMFV2Oh",
+      "body": "The mystery woman of the jungle returns in a modern dark pulp reimagining."
     },
     {
       "title": "Old Tales. New Adventures.",
@@ -22,7 +23,8 @@
       "image": "images/banner.png",
       "excerpt": "AltWorld Comics blends classic pulp spirit with new dark fantasy and horror stories.",
       "linkText": "Explore Store",
-      "link": "#store"
+      "link": "#store",
+      "body": "AltWorld Comics blends classic pulp spirit with new dark fantasy and horror stories."
     }
   ],
   "store": [

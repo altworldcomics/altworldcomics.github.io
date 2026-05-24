@@ -461,7 +461,7 @@ function postTemplate(post = {}, index = 0) {
           <textarea class="post-excerpt">${escapeHtml(post.excerpt || "")}</textarea>
         </div>
         <div class="full">
-          <label>Link</label>
+          <label>Full Post Body</label><textarea data-field="body"></textarea><label>Link</label>
           <input class="post-link" value="${escapeHtml(post.link || "")}">
         </div>
       </div>
@@ -502,7 +502,7 @@ function storeTemplate(item = {}, index = 0) {
           <textarea class="store-description">${escapeHtml(item.description || "")}</textarea>
         </div>
         <div class="full">
-          <label>Link</label>
+          <label>Full Post Body</label><textarea data-field="body"></textarea><label>Link</label>
           <input class="store-link" value="${escapeHtml(item.link || "")}">
         </div>
       </div>
