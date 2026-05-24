@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AltWorld Comics Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#070707;--panel:#12110e;--text:#f4ead2;--muted:#b8aa8a;--gold:#d5b452;--line:rgba(213,180,82,.22);--danger:#c55353}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}header{position:sticky;top:0;z-index:5;background:rgba(7,7,7,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:18px 24px;display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}h1,h2,h3{font-family:Cinzel,serif;margin:0}h1{font-size:24px}.wrap{max-width:1180px;margin:0 auto;padding:24px}.tabs{display:flex;gap:8px;flex-wrap:wrap}.tabs button,.actions button,.item button,label.button{border:1px solid var(--line);background:#17150f;color:var(--text);padding:10px 12px;border-radius:999px;font-weight:800;cursor:pointer}.tabs button.active{background:rgba(213,180,82,.22);color:#ffe69a}.panel{display:none;background:linear-gradient(180deg,#12110e,#0c0c0a);border:1px solid var(--line);border-radius:20px;padding:20px;margin:18px 0}.panel.active{display:block}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.full{grid-column:1/-1}label{display:block;color:var(--muted);font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}input,textarea{width:100%;border:1px solid var(--line);background:#090908;color:var(--text);border-radius:12px;padding:12px;font:inherit}textarea{min-height:96px;resize:vertical}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.danger{color:#ffd2d2!important;border-color:rgba(197,83,83,.6)!important}.list{display:grid;gap:12px;margin-top:18px}.item{display:grid;grid-template-columns:80px 1fr auto;gap:14px;align-items:center;border:1px solid var(--line);background:#0a0a09;border-radius:14px;padding:12px}.item img{width:80px;height:80px;border-radius:10px;object-fit:cover;background:#050505}.item p{margin:4px 0;color:var(--muted)}.hint{color:var(--muted);line-height:1.6}.notice{border:1px solid var(--line);border-radius:14px;padding:14px;background:#0d0c09;color:var(--muted);margin-bottom:18px}.top-actions{display:flex;gap:10px;flex-wrap:wrap}.file-input{display:none}@media(max-width:780px){.grid{grid-template-columns:1fr}.item{grid-template-columns:56px 1fr}.item img{width:56px;height:56px}.item div:last-child{grid-column:1/-1}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AltWorld Comics Admin</h1>
+    <div class="top-actions">
+      <label class="button" for="jsonUpload">Load existing data.json</label>
+      <input id="jsonUpload" class="file-input" type="file" accept="application/json,.json" />
+      <button id="downloadJson" class="button">Download data.json</button>
+      <a class="button" href="index.html" target="_blank" rel="noopener" style="text-decoration:none">Preview site</a>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="notice">
+      This admin page does not write to GitHub automatically. Edit content here, download the new <strong>data.json</strong>, then replace the old file in your GitHub repository. Images must be uploaded manually into the <strong>images/</strong> folder and referenced as paths like <strong>images/fantomah-cover.jpg</strong>.
+    </div>
+
+    <nav class="tabs">
+      <button data-tab="site" class="active">Site Settings</button>
+      <button data-tab="posts">Main Page Posts</button>
+      <button data-tab="store">Store Items</button>
+      <button data-tab="about">About</button>
+      <button data-tab="raw">Raw JSON</button>
+    </nav>
+
+    <section id="site" class="panel active">
+      <h2>Site Settings</h2>
+      <div class="grid" id="siteForm"></div>
+    </section>
+
+    <section id="posts" class="panel">
+      <h2>Main Page Posts</h2>
+      <p class="hint">These cards appear on the Main Page blog/feed.</p>
+      <div class="actions"><button id="newPost">Add new post</button></div>
+      <div id="postEditor"></div>
+      <div id="postList" class="list"></div>
+    </section>
+
+    <section id="store" class="panel">
+      <h2>Store Items</h2>
+      <p class="hint">These cards appear in Store and link directly to Amazon or another external page.</p>
+      <div class="actions"><button id="newStore">Add new store item</button></div>
+      <div id="storeEditor"></div>
+      <div id="storeList" class="list"></div>
+    </section>
+
+    <section id="about" class="panel">
+      <h2>About</h2>
+      <div class="grid" id="aboutForm"></div>
+    </section>
+
+    <section id="raw" class="panel">
+      <h2>Raw JSON</h2>
+      <p class="hint">Advanced editing. Be careful: invalid JSON will break the site.</p>
+      <textarea id="rawJson" style="min-height:420px"></textarea>
+      <div class="actions"><button id="applyRaw">Apply raw JSON</button></div>
+    </section>
+  </div>
+
+  <script>
+    const defaultData = {
+      site:{title:'AltWorld Comics',logo:'images/altworld-comics-logo.png',heroImage:'images/fantomah-hero.jpg',tagline:'Forgotten worlds return.',intro:'AltWorld Comics reimagines forgotten public domain legends as dark pulp, horror and retro comic stories for a new generation.',primaryButtonText:'Read Fantomah on Kindle',primaryButtonUrl:'https://a.co/d/0bMFV2Oh',instagram:'https://www.instagram.com/altworldcomics/',twitter:'https://x.com/altworldcomics'},
+      posts:[], store:[], about:{title:'About AltWorld Comics',image:'images/about-altworld-comics.jpg',body:'AltWorld Comics is a dark pulp comic label focused on reimagining forgotten public domain legends.',contact:'altworldcomics@example.com'}
+    };
+    let data = structuredClone(defaultData);
+    const fields = {
+      site:[['title','Site title'],['logo','Logo path'],['heroImage','Hero image path'],['tagline','Hero tagline'],['intro','Hero intro','textarea'],['primaryButtonText','Hero button text'],['primaryButtonUrl','Hero button URL'],['instagram','Instagram URL'],['twitter','X / Twitter URL']],
+      about:[['title','About title'],['image','About image path'],['body','About body','textarea'],['contact','Contact email']]
+    };
+    function q(s){return document.querySelector(s)}
+    function makeField(obj,key,label,type='text'){
+      const wrap=document.createElement('div'); if(type==='textarea') wrap.className='full';
+      wrap.innerHTML=`<label>${label}</label>${type==='textarea'?`<textarea data-key="${key}">${obj[key]||''}</textarea>`:`<input data-key="${key}" value="${obj[key]||''}">`}`;
+      wrap.querySelector('[data-key]').addEventListener('input', e=>{obj[key]=e.target.value; refreshRaw();});
+      return wrap;
+    }
+    function renderForms(){
+      const sf=q('#siteForm'); sf.innerHTML=''; fields.site.forEach(f=>sf.appendChild(makeField(data.site,f[0],f[1],f[2])));
+      const af=q('#aboutForm'); af.innerHTML=''; fields.about.forEach(f=>af.appendChild(makeField(data.about,f[0],f[1],f[2])));
+      renderLists(); refreshRaw();
+    }
+    function renderLists(){
+      renderList('postList', data.posts, editPost, deletePost, 'image');
+      renderList('storeList', data.store, editStore, deleteStore, 'cover');
+    }
+    function renderList(id, arr, editFn, delFn, imageKey){
+      const list=q('#'+id); list.innerHTML='';
+      arr.forEach((item,idx)=>{
+        const row=document.createElement('div'); row.className='item';
+        row.innerHTML=`<img src="${item[imageKey]||''}" onerror="this.style.opacity=.25"><div><strong>${item.title||'(Untitled)'}</strong><p>${item.date||item.status||item.subtitle||''}</p><p>${item.excerpt||item.description||''}</p></div><div><button data-edit>Edit</button> <button class="danger" data-del>Delete</button></div>`;
+        row.querySelector('[data-edit]').onclick=()=>editFn(idx);
+        row.querySelector('[data-del]').onclick=()=>delFn(idx);
+        list.appendChild(row);
+      });
+    }
+    function editor(containerId, obj, schema, saveCb, cancelCb){
+      const box=q('#'+containerId); box.innerHTML='<div class="panel active" style="margin-top:18px"><h3>Edit item</h3><div class="grid"></div><div class="actions"><button data-save>Save</button><button data-cancel>Cancel</button></div></div>';
+      const grid=box.querySelector('.grid'); schema.forEach(f=>grid.appendChild(makeField(obj,f[0],f[1],f[2])));
+      box.querySelector('[data-save]').onclick=()=>{saveCb(obj); box.innerHTML=''; renderLists(); refreshRaw();};
+      box.querySelector('[data-cancel]').onclick=()=>{box.innerHTML=''; if(cancelCb) cancelCb(); renderLists(); refreshRaw();};
+    }
+    const postSchema=[['id','ID / slug'],['title','Title'],['date','Date YYYY-MM-DD'],['image','Image path'],['excerpt','Excerpt','textarea'],['body','Body','textarea'],['buttonText','Button text'],['buttonUrl','Button URL']];
+    const storeSchema=[['id','ID / slug'],['title','Title'],['subtitle','Subtitle'],['cover','Cover path'],['description','Description','textarea'],['status','Status'],['buttonText','Button text'],['buttonUrl','Button URL']];
+    function editPost(i){ const draft={...data.posts[i]}; editor('postEditor',draft,postSchema,o=>{data.posts[i]=o;}); }
+    function deletePost(i){ if(confirm('Delete this post?')){data.posts.splice(i,1); renderLists(); refreshRaw();}}
+    function editStore(i){ const draft={...data.store[i]}; editor('storeEditor',draft,storeSchema,o=>{data.store[i]=o;}); }
+    function deleteStore(i){ if(confirm('Delete this store item?')){data.store.splice(i,1); renderLists(); refreshRaw();}}
+    q('#newPost').onclick=()=>{const item={id:'new-post',title:'New post',date:new Date().toISOString().slice(0,10),image:'images/new-post.jpg',excerpt:'',body:'',buttonText:'Read more',buttonUrl:'#'}; editor('postEditor',item,postSchema,o=>{data.posts.push(o);});};
+    q('#newStore').onclick=()=>{const item={id:'new-item',title:'New item',subtitle:'',cover:'images/new-cover.jpg',description:'',status:'Coming soon',buttonText:'Coming soon',buttonUrl:'#'}; editor('storeEditor',item,storeSchema,o=>{data.store.push(o);});};
+    function refreshRaw(){ q('#rawJson').value=JSON.stringify(data,null,2); }
+    q('#applyRaw').onclick=()=>{ try{ data=JSON.parse(q('#rawJson').value); renderForms(); alert('Raw JSON applied.'); }catch(e){ alert('Invalid JSON: '+e.message); } };
+    q('#downloadJson').onclick=()=>{ const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='data.json'; a.click(); URL.revokeObjectURL(a.href); };
+    q('#jsonUpload').addEventListener('change', async e=>{ const file=e.target.files[0]; if(!file)return; try{ data=JSON.parse(await file.text()); renderForms(); alert('Loaded.'); }catch(err){ alert('Could not load JSON: '+err.message); } });
+    document.querySelectorAll('[data-tab]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-tab]').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));btn.classList.add('active');q('#'+btn.dataset.tab).classList.add('active');refreshRaw();}));
+    fetch('data.json',{cache:'no-store'}).then(r=>r.ok?r.json():defaultData).then(j=>{data=j;renderForms();}).catch(()=>renderForms());
+  </script>
+</body>
+</html>
