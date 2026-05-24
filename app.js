@@ -19,12 +19,8 @@ function setImage(node, src, fallback){ node.src = src || fallback; }
 function renderSite(){
   const { site, posts, store, about } = state.data;
   document.title = site.title || 'AltWorld Comics';
-  $('#siteLogo').src = site.logo || 'images/altworld-comics-logo.png';
-  $('#hero').style.backgroundImage = `url('${site.heroImage || 'images/fantomah-hero.jpg'}')`;
-  $('#heroTagline').textContent = site.tagline || 'Forgotten worlds return.';
-  $('#heroIntro').textContent = site.intro || '';
-  $('#heroButton').textContent = site.primaryButtonText || 'Read on Kindle';
-  $('#heroButton').href = site.primaryButtonUrl || '#';
+  $('#siteLogo').src = site.logo || 'images/logo.png';
+  $('#heroBanner').src = site.heroImage || 'images/banner.png';
   $('#twitterLink').href = site.twitter || '#';
   $('#instagramLink').href = site.instagram || '#';
 

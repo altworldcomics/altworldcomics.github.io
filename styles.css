@@ -71,58 +71,21 @@ a{color:inherit}
 .top-nav a:hover,.top-nav a.active{color:var(--gold-2);border-color:var(--line);background:rgba(201,166,70,.08)}
 .page{display:none;min-height:calc(100vh - 90px)}
 .active-page{display:block}
-.hero{
-  min-height:70vh;
-  position:relative;
-  display:grid;
-  align-items:end;
-  padding:clamp(56px,8vw,96px) clamp(18px,4vw,56px);
-  background-size:cover;
-  background-position:center;
+.hero-banner-wrap{
+  width:100%;
+  background:#020202;
   border-bottom:1px solid var(--line);
+  padding:0;
 }
-.hero:before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:radial-gradient(circle at 65% 48%, transparent 0 26%, rgba(0,0,0,.18) 46%, rgba(0,0,0,.68) 100%);
+.hero-banner{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:contain;
+  background:#020202;
 }
-.hero-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(90deg, rgba(0,0,0,.86), rgba(0,0,0,.48) 42%, rgba(0,0,0,.24)),linear-gradient(0deg, rgba(5,5,5,.94), transparent 52%);
-}
-.hero-content{position:relative;max-width:680px}
-.eyebrow{
-  color:var(--gold-2);
-  text-transform:uppercase;
-  font-weight:800;
-  letter-spacing:.18em;
-  font-size:12px;
-  margin:0 0 12px;
-}
-h1,h2,h3{font-family:Cinzel,serif;margin:0;line-height:1.02}
-h1{font-size:clamp(42px,8vw,92px);letter-spacing:.02em;text-shadow:0 10px 50px rgba(0,0,0,.9)}
-h2{font-size:clamp(32px,5vw,56px)}
-h3{font-size:24px}
-.hero-content p:not(.eyebrow),.section-copy,.about-body,.card p,.store-card p{color:var(--muted);font-size:17px;line-height:1.7}
-.button,.small-button{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  margin-top:18px;
-  border:1px solid rgba(241,217,121,.42);
-  background:linear-gradient(135deg, rgba(201,166,70,.28), rgba(38,74,52,.42));
-  color:var(--text);
-  text-decoration:none;
-  font-weight:800;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-  border-radius:999px;
-  box-shadow:var(--shadow);
-}
-.button{padding:14px 20px}.small-button{padding:10px 14px;font-size:12px}
-.content-section{padding:clamp(38px,6vw,72px) clamp(18px,4vw,56px);max-width:1220px;margin:0 auto}
+
+.content-section{padding:clamp(34px,5vw,58px) clamp(18px,4vw,56px);max-width:1220px;margin:0 auto}
 .page-top{padding-top:clamp(56px,8vw,100px)}
 .section-heading{margin-bottom:26px}
 .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
