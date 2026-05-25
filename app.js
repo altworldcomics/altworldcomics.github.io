@@ -4,42 +4,51 @@ function safe(v,f=""){return v||f}
 function setImage(id,src){const el=document.getElementById(id);if(el&&src)el.src=src}
 function renderSite(){const s=siteData.site||{};document.title=safe(s.title,"AltWorld Comics");document.getElementById("siteTitle").textContent=safe(s.title,"ALTWORLD COMICS");document.getElementById("siteTagline").textContent=safe(s.tagline,"Old tales. New adventures.");document.getElementById("siteIntro").textContent=safe(s.intro,"");setImage("siteLogo",safe(s.logo,"images/logo.png"));setImage("heroBanner",safe(s.banner,"images/banner.png"));renderPosts(siteData.posts||[]);renderStore(siteData.store||[]);renderAbout(siteData.about||{})}
 
+
 function renderPosts(posts){
-const modal=document.getElementById("postModal");
-const modalBody=document.getElementById("modalContent");
+  const modal=document.getElementById("postModal");
+  const modalBody=document.getElementById("modalContent");
 
-window.openPost=function(index){
-const p=posts[index];
-if(!p)return;
-modalBody.innerHTML=`
-<div class="modal-post">
-<img class="modal-img" src="${safe(p.image,fallbackImg)}" alt="${safe(p.title,"")}">
-<div class="card-date">${safe(p.date,"")}</div>
-<h2>${safe(p.title,"")}</h2>
-<div class="modal-text">${safe(p.body,p.excerpt,"")}</div>
-${p.link && p.link !== "#"
-? `<div style="margin-top:24px"><a class="btn" href="${p.link}" target="_blank" rel="noopener">${safe(p.linkText,"Open")}</a></div>`
-: ""}
-</div>`;
-modal.classList.add("open");
-document.body.style.overflow="hidden";
-}
+  window.openPost=function(index){
+    const p=posts[index];
+    if(!p)return;
 
-window.closePost=function(){
-modal.classList.remove("open");
-document.body.style.overflow="";
-}
+    const fullText = safe(p.body, p.excerpt || "");
+    const extraLink = (p.link && p.link !== "#")
+      ? `<div class="modal-actions"><a class="btn" href="${p.link}" target="_blank" rel="noopener">${safe(p.linkText,"Open Link")}</a></div>`
+      : "";
 
-document.getElementById("postsGrid").innerHTML=posts.map((p,i)=>`
-<article class="card">
-<img class="card-img" src="${safe(p.image,fallbackImg)}" alt="${safe(p.title,"AltWorld Comics post")}" onerror="this.src='${fallbackImg}'">
-<div class="card-body">
-<div class="card-date">${safe(p.date,"")}</div>
-<h3>${safe(p.title,"")}</h3>
-<p>${safe(p.excerpt,"")}</p>
-<button class="btn" onclick="openPost(${i})">${safe(p.linkText,"Read More")}</button>
-</div>
-</article>`).join("")
+    modalBody.innerHTML=`
+      <article class="modal-post">
+        <img class="modal-img" src="${safe(p.image,fallbackImg)}" alt="${safe(p.title,"")}" onerror="this.src='${fallbackImg}'">
+        <div class="modal-inner">
+          <div class="card-date">${safe(p.date,"")}</div>
+          <h2>${safe(p.title,"")}</h2>
+          <div class="modal-text">${fullText}</div>
+          ${extraLink}
+        </div>
+      </article>
+    `;
+    modal.classList.add("open");
+    document.body.style.overflow="hidden";
+  };
+
+  window.closePost=function(){
+    modal.classList.remove("open");
+    document.body.style.overflow="";
+  };
+
+  document.getElementById("postsGrid").innerHTML=posts.map((p,i)=>`
+    <article class="card">
+      <img class="card-img" src="${safe(p.image,fallbackImg)}" alt="${safe(p.title,"AltWorld Comics post")}" onerror="this.src='${fallbackImg}'">
+      <div class="card-body">
+        <div class="card-date">${safe(p.date,"")}</div>
+        <h3>${safe(p.title,"")}</h3>
+        <p>${safe(p.excerpt,"")}</p>
+        <button class="btn" onclick="openPost(${i})">Read More</button>
+      </div>
+    </article>
+  `).join("");
 }
 
 function renderStore(items){document.getElementById("storeGrid").innerHTML=items.map(i=>`<article class="card"><img class="card-img" src="${safe(i.image,fallbackImg)}" alt="${safe(i.title,"AltWorld Comics release")}" onerror="this.src='${fallbackImg}'"><div class="card-body"><div class="card-status">${safe(i.status,"")}</div><h3>${safe(i.title,"")}</h3><p>${safe(i.description,"")}</p>${i.link&&i.link!=="#"?`<a class="btn" href="${i.link}" target="_blank" rel="noopener">${safe(i.button,"Open")}</a>`:`<span class="btn">${safe(i.button,"Coming Soon")}</span>`}</div></article>`).join("")}

@@ -381,6 +381,7 @@ function collectForms() {
     date: item.querySelector(".post-date").value.trim(),
     image: item.querySelector(".post-image").value.trim(),
     excerpt: item.querySelector(".post-excerpt").value.trim(),
+    body: item.querySelector(".post-body").value.trim(),
     linkText: item.querySelector(".post-linkText").value.trim(),
     link: item.querySelector(".post-link").value.trim()
   }));
@@ -461,7 +462,11 @@ function postTemplate(post = {}, index = 0) {
           <textarea class="post-excerpt">${escapeHtml(post.excerpt || "")}</textarea>
         </div>
         <div class="full">
-          <label>Full Post Body</label><textarea data-field="body"></textarea><label>Link</label>
+          <label>Full Post Body</label>
+          <textarea class="post-body">${escapeHtml(post.body || "")}</textarea>
+        </div>
+        <div class="full">
+          <label>Link</label>
           <input class="post-link" value="${escapeHtml(post.link || "")}">
         </div>
       </div>
@@ -525,6 +530,7 @@ function addPost() {
     date: "",
     image: "images/banner.png",
     excerpt: "",
+    body: "",
     linkText: "Read More",
     link: "#"
   });
