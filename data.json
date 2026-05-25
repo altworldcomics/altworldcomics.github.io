@@ -9,22 +9,13 @@
   },
   "posts": [
     {
-      "title": "Fantomah — Issue #0 Released",
-      "date": "2026-05-24",
-      "image": "images/fantomah0.jpg",
-      "excerpt": "The mystery woman of the jungle returns in a modern dark pulp reimagining.",
-      "linkText": "Read on Kindle",
-      "link": "https://a.co/d/0bMFV2Oh",
-      "body": "The mystery woman of the jungle returns in a modern dark pulp reimagining."
-    },
-    {
-      "title": "Old Tales. New Adventures.",
+      "title": "What Is AltWorld Comics?",
       "date": "2026-05-25",
       "image": "images/banner.png",
-      "excerpt": "AltWorld Comics blends classic pulp spirit with new dark fantasy and horror stories.",
-      "linkText": "Explore Store",
-      "link": "#store",
-      "body": "AltWorld Comics blends classic pulp spirit with new dark fantasy and horror stories."
+      "excerpt": "AltWorld Comics is a dark pulp and retro fantasy comic label focused on forgotten legends, twisted tales and modern mythmaking.",
+      "body": "AltWorld Comics was created to bring forgotten worlds back to life.\n\nWe focus on dark pulp adventures, retro horror, weird fantasy and reimagined legends inspired by the Golden Age of comics and vintage fantasy storytelling.\n\nSome of our stories rebuild forgotten public domain characters for a modern audience. Others are completely original tales born from the same dark vintage spirit.\n\nOur goal is not simple nostalgia.\n\nWe want to preserve the atmosphere, mystery and imagination of classic pulp fiction while combining it with modern cinematic visuals and darker storytelling.\n\nFrom jungle goddesses and ancient ruins to twisted fairy tales and supernatural horror, AltWorld Comics explores worlds where old myths live again.\n\nOld Tales.\nNew Adventures.\nDifferent Worlds.",
+      "linkText": "Read More",
+      "link": "#"
     }
   ],
   "store": [
