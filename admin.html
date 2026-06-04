@@ -282,12 +282,14 @@
 
       <div id="tab-posts" class="tab">
         <h2>Main Page / Blog</h2>
+        <p class="hint">Post image standard: <code>1200×675 px</code> (16:9). New posts are added to the top.</p>
         <div id="posts-list"></div>
         <button class="success" onclick="addPost()">Add Blog Post</button>
       </div>
 
       <div id="tab-store" class="tab">
         <h2>Store</h2>
+        <p class="hint">Store cover standard: <code>1024×1536 px</code> (2:3). New store items are added to the top.</p>
         <div id="store-list"></div>
         <button class="success" onclick="addStoreItem()">Add Store Item</button>
       </div>
@@ -507,7 +509,7 @@ function storeTemplate(item = {}, index = 0) {
           <textarea class="store-description">${escapeHtml(item.description || "")}</textarea>
         </div>
         <div class="full">
-          <label>Full Post Body</label><textarea data-field="body"></textarea><label>Link</label>
+          <label>Link</label>
           <input class="store-link" value="${escapeHtml(item.link || "")}">
         </div>
       </div>
@@ -525,7 +527,7 @@ function renderStore() {
 
 function addPost() {
   collectForms();
-  data.posts.push({
+  data.posts.unshift({
     title: "New Blog Post",
     date: "",
     image: "images/banner.png",
@@ -540,7 +542,7 @@ function addPost() {
 
 function addStoreItem() {
   collectForms();
-  data.store.push({
+  data.store.unshift({
     title: "New Comic",
     status: "Coming Soon",
     image: "images/new-comic.jpg",
