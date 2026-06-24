@@ -47,6 +47,14 @@
   ],
   "store": [
     {
+      "title": "KnowAll: The AI That Answered Everything",
+      "status": "Out Now",
+      "image": "images/knowall-cover.png",
+      "description": "Sixteen-year-old Jonathan Reed is tired of being ordinary.\n\nThen he discovers KnowAll, an experimental artificial intelligence capable of answering almost any question.\n\nAs success turns into obsession, Jonathan finds himself facing a question no machine can answer:\n\nWho is responsible when knowledge becomes dangerous?\n\nA technological thriller about artificial intelligence, ambition, and responsibility.",
+      "button": "Read on Kindle",
+      "link": "https://a.co/d/0aWlWQXP"
+    },
+    {
       "title": "Dark Tales: Little Red Riding Hood",
       "status": "Out Now",
       "image": "images/darktales-issue-1-cover.png",
