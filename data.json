@@ -65,6 +65,14 @@
   ],
   "store": [
     {
+      "title": "Chronicles of Ankhara: Quest for the Godkiller",
+      "status": "Out Now",
+      "image": "images/Chronicles_of_Ankhara_Quest_for_the_Godkiller_Cover.jpg",
+      "description": "Book One of Chronicles of Ankhara. Five Kingdoms, ancient gods, elemental magic, and a legendary weapon that may not be what it seems. Quest for the Godkiller is now available on Amazon Kindle and Kindle Unlimited.",
+      "button": "Read on Kindle",
+      "link": "https://www.amazon.com/dp/B0HDZZ9WD3"
+    },
+    {
       "title": "KnowAll: The AI That Answered Everything",
       "status": "Out Now",
       "image": "images/knowall-cover.png",
