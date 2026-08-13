@@ -34,3 +34,8 @@ Keep the current `images/` folder in the GitHub repository exactly as it is.
 All pages reference the image filenames already present in the repository.
 
 Upload/replace the files from this package without deleting the existing `images/` directory.
+
+## v3 editorial additions
+- Dark Tales: spoiler-light Taletellers and character visual sections.
+- Fantomah: wiki/archive-style series hub with legacy and remaster context.
+- New web-optimized images and landscape home-card crops.
