@@ -28,3 +28,5 @@
 .wiki-table td{color:#d8ccb0;font-size:17px;line-height:1.55}
 .note{border-left:3px solid var(--gold);padding:12px 16px;background:rgba(215,184,92,.06);color:var(--muted);line-height:1.6}
 @media(max-width:850px){.editorial-gallery,.profile-grid{grid-template-columns:1fr}.profile-card{grid-template-columns:1fr}.profile-card img{max-height:520px}.profile-card .profile-copy{padding:20px}}
+
+.visual-slot{display:none}
