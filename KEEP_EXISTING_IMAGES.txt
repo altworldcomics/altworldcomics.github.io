@@ -1,1 +1,0 @@
-Keep the existing GitHub repository images/ folder. Do not replace it with this placeholder.
