@@ -42,14 +42,30 @@ function itemCard(i){
     </div></article>`;
 }
 
+function brandCard(b){
+  const visual = b.logo
+    ? `<img class="brand-logo-img" src="${esc(b.logo)}" alt="${esc(b.title)} logo">`
+    : `<div class="brand-mark">${esc(safe(b.mark,b.title))}</div>`;
+  const bg = b.background ? ` style="--brand-bg:url('${esc(b.background)}')"` : "";
+  return `<a class="brand-card" href="${esc(b.url)}"${bg}>
+    <div class="brand-visual">${visual}</div>
+    <div class="brand-copy">
+      <div class="card-meta">${esc(b.category)} · ${esc(b.status)}</div>
+      <h3>${esc(b.title)}</h3>
+      <p>${esc(b.description)}</p>
+      <span class="brand-enter">Explore ${esc(b.title)} →</span>
+    </div>
+  </a>`;
+}
+
 function renderBooks(){
-  const items=(siteData.store||[]).filter(i=>i.type==="book");
-  document.getElementById("booksGrid").innerHTML=items.map(itemCard).join("");
+  const items=((siteData.brands||{}).books||[]);
+  document.getElementById("booksGrid").innerHTML=items.map(brandCard).join("");
 }
 function renderComics(){
-  const all=(siteData.store||[]).filter(i=>i.type==="comic");
-  document.getElementById("originalsGrid").innerHTML=all.filter(i=>i.collection==="Originals").map(itemCard).join("");
-  document.getElementById("remasteredGrid").innerHTML=all.filter(i=>i.collection==="Remastered Classics").map(itemCard).join("");
+  const brands=siteData.brands||{};
+  document.getElementById("originalsGrid").innerHTML=(brands.comicsOriginals||[]).map(brandCard).join("");
+  document.getElementById("remasteredGrid").innerHTML=(brands.comicsRemastered||[]).map(brandCard).join("");
 }
 function renderStore(filter){
   const items=(siteData.store||[]).filter(i=>filter==="all"||i.type===filter||i.collection===filter);
