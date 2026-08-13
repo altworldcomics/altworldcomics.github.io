@@ -4,48 +4,76 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="google-site-verification" content="aSjY_Ai-Pfq17QcKWQdB44wUdpcB754-4yv02m4ApnU" />
-<title>AltWorld Comics</title>
-<meta name="description" content="AltWorld Comics — dark pulp, horror, retro comics and original dark tales." />
+<title>AltWorld Comics — Books, Comics & Original Worlds</title>
+<meta name="description" content="AltWorld Comics is an independent publisher of original books, original comics and remastered classics. Explore Chronicles of Ankhara, KnowAll, Fantomah and Dark Tales." />
+<link rel="canonical" href="https://altworldcomics.github.io/" />
+<meta property="og:title" content="AltWorld Comics — Books, Comics & Original Worlds" />
+<meta property="og:description" content="Original books, original comics and remastered classics from AltWorld Comics." />
+<meta property="og:image" content="https://altworldcomics.github.io/images/banner.png" />
+<meta property="og:url" content="https://altworldcomics.github.io/" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <header class="topbar">
-  <a class="brand-wrap" href="#main" data-tab="main" aria-label="AltWorld Comics home">
+  <a class="brand-wrap" href="#home" data-tab="home" aria-label="AltWorld Comics home">
     <img id="siteLogo" class="site-logo" src="images/logo.png" alt="AltWorld Comics logo" />
     <span id="siteTitle">ALTWORLD COMICS</span>
   </a>
   <nav class="nav" aria-label="Main navigation">
-    <button class="nav-link active" data-tab="main">Home</button>
-    <button class="nav-link" data-tab="store">Store</button>
-    <button class="nav-link" data-tab="about">About</button>
+    <a class="nav-link active" href="#home" data-tab="home">Home</a>
+    <a class="nav-link" href="#books" data-tab="books">Books</a>
+    <a class="nav-link" href="#comics" data-tab="comics">Comics</a>
+    <a class="nav-link" href="#store" data-tab="store">Store</a>
+    <a class="nav-link" href="#about" data-tab="about">About</a>
   </nav>
 </header>
 
 <main>
-<section id="main" class="page-section active-section">
-  <section class="hero-strip">
-    <img id="heroBanner" src="images/banner.png" alt="AltWorld Comics banner" />
-  </section>
-
+<section id="home" class="page-section active-section">
+  <section class="hero-strip"><img id="heroBanner" src="images/banner.png" alt="AltWorld Comics banner" /></section>
   <section class="intro-panel">
     <p id="siteTagline" class="kicker">Old tales. New adventures. Different worlds.</p>
-    <p id="siteIntro"></p>
+    <p id="siteIntro" class="lead"></p>
   </section>
-
   <section class="content-wrap">
-    <div class="section-title compact-title">
-      <p>Publisher Updates</p>
-      <h1>Latest Releases & Updates</h1>
+    <div class="section-title"><p>Explore the label</p><h1>Books & Comics</h1></div>
+    <div class="split-cards">
+      <article class="portal-card"><p class="eyebrow">Original Fiction</p><h2>Books</h2><p>Original novels and expanding worlds — from epic fantasy to technological thrillers.</p><a class="btn" href="#books" data-tab="books">Explore Books</a></article>
+      <article class="portal-card"><p class="eyebrow">Originals & Remastered Classics</p><h2>Comics</h2><p>Original dark tales alongside forgotten Golden Age characters restored and reintroduced.</p><a class="btn" href="#comics" data-tab="comics">Explore Comics</a></article>
     </div>
+  </section>
+  <section class="content-wrap">
+    <div class="section-title"><p>Publisher Updates</p><h2>Latest Releases & Updates</h2></div>
     <div id="postsGrid" class="grid posts-grid"></div>
+  </section>
+</section>
+
+<section id="books" class="page-section">
+  <section class="content-wrap page-top">
+    <div class="section-title"><p>Original Fiction</p><h1>Books</h1></div>
+    <div id="booksGrid" class="grid catalog-grid"></div>
+  </section>
+</section>
+
+<section id="comics" class="page-section">
+  <section class="content-wrap page-top">
+    <div class="section-title"><p>AltWorld Comics Catalogue</p><h1>Comics</h1></div>
+    <div class="subhead"><div><p class="eyebrow">Created at AltWorld</p><h2>Originals</h2></div><p>Original comic projects developed under the AltWorld Comics label.</p></div>
+    <div id="originalsGrid" class="grid catalog-grid"></div>
+    <div class="subhead" style="margin-top:55px"><div><p class="eyebrow">Forgotten legends, newly presented</p><h2>Remastered Classics</h2></div><p>Public-domain comic history restored, contextualized and presented for a new generation.</p></div>
+    <div id="remasteredGrid" class="grid catalog-grid"></div>
   </section>
 </section>
 
 <section id="store" class="page-section">
   <section class="content-wrap page-top">
-    <div class="section-title compact-title">
-      <p>Digital Releases</p>
-      <h1>Store</h1>
+    <div class="section-title"><p>Digital Releases</p><h1>Store</h1></div>
+    <div class="filterbar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="book">Books</button>
+      <button class="filter-btn" data-filter="comic">Comics</button>
+      <button class="filter-btn" data-filter="Originals">Comic Originals</button>
+      <button class="filter-btn" data-filter="Remastered Classics">Remastered Classics</button>
     </div>
     <div id="storeGrid" class="grid store-grid"></div>
   </section>
@@ -53,35 +81,18 @@
 
 <section id="about" class="page-section">
   <section class="content-wrap page-top">
-    <div class="section-title compact-title">
-      <p>Who We Are</p>
-      <h1 id="aboutHeading">About AltWorld Comics</h1>
-    </div>
+    <div class="section-title"><p>Who We Are</p><h1 id="aboutHeading">About AltWorld Comics</h1></div>
     <article class="about-card">
       <p id="aboutBody"></p>
-      <div class="about-links">
-        <a id="aboutX" href="#" target="_blank" rel="noopener">X / Twitter</a>
-        <a id="aboutInstagram" href="#" target="_blank" rel="noopener">Instagram</a>
-        <span id="aboutContact"></span>
-      </div>
+      <div class="about-links"><a id="aboutX" href="#" target="_blank" rel="noopener">X / Twitter</a><a id="aboutInstagram" href="#" target="_blank" rel="noopener">Instagram</a><span id="aboutContact"></span></div>
     </article>
   </section>
 </section>
 </main>
 
-<footer>
-  <span>ALTWORLD COMICS</span>
-  <span>Old tales. New adventures.</span>
-</footer>
+<footer><span>ALTWORLD COMICS</span><span>Books • Comics • Original Worlds</span></footer>
 
-<div id="postModal" class="post-modal" aria-hidden="true">
-  <div class="post-modal-overlay" onclick="closePost()"></div>
-  <div class="post-modal-box" role="dialog" aria-modal="true">
-    <button class="modal-close" onclick="closePost()" aria-label="Close">×</button>
-    <div id="modalContent"></div>
-  </div>
-</div>
-
+<div id="postModal" class="post-modal" aria-hidden="true"><div class="post-modal-overlay" onclick="closePost()"></div><div class="post-modal-box" role="dialog" aria-modal="true"><button class="modal-close" onclick="closePost()" aria-label="Close">×</button><div id="modalContent"></div></div></div>
 <script src="app.js"></script>
 </body>
 </html>
