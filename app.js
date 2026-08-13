@@ -43,17 +43,21 @@ function itemCard(i){
 }
 
 function brandCard(b){
-  const visual = b.logo
-    ? `<img class="brand-logo-img" src="${esc(b.logo)}" alt="${esc(b.title)} logo">`
-    : `<div class="brand-mark">${esc(safe(b.mark,b.title))}</div>`;
-  const bg = b.background ? ` style="--brand-bg:url('${esc(b.background)}')"` : "";
-  return `<a class="brand-card" href="${esc(b.url)}"${bg}>
-    <div class="brand-visual">${visual}</div>
-    <div class="brand-copy">
-      <div class="card-meta">${esc(b.category)} · ${esc(b.status)}</div>
-      <h3>${esc(b.title)}</h3>
-      <p>${esc(b.description)}</p>
-      <span class="brand-enter">Explore ${esc(b.title)} →</span>
+  const logo = b.logo
+    ? `<img class="library-logo" src="${esc(b.logo)}" alt="${esc(b.title)} logo"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='block'">`
+    : "";
+  const fallback = `<div class="library-logo-fallback"${b.logo ? ' style="display:none"' : ''}>${esc(safe(b.mark,b.title))}</div>`;
+  const bg = b.background ? ` style="--library-bg:url('${esc(b.background)}')"` : "";
+
+  return `<a class="library-tile" href="${esc(b.url)}"${bg}>
+    <div class="library-art" aria-hidden="true"></div>
+    <div class="library-overlay"></div>
+    <div class="library-logo-wrap">${logo}${fallback}</div>
+    <div class="library-info">
+      <div class="library-kicker">${esc(b.category)}</div>
+      <div class="library-title">${esc(b.title)}</div>
+      <div class="library-status">${esc(b.status)}</div>
     </div>
   </a>`;
 }
