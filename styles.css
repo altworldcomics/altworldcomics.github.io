@@ -86,7 +86,7 @@ footer{border-top:1px solid var(--line);color:#837553;display:flex;justify-conte
 
 .library-grid{
   display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-columns:repeat(2,minmax(0,1fr));
   gap:18px;
 }
 .library-tile{
@@ -187,9 +187,6 @@ footer{border-top:1px solid var(--line);color:#837553;display:flex;justify-conte
   padding-left:14px;
 }
 
-@media(max-width:1180px){
-  .library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-}
 @media(max-width:760px){
   .library-heading-row,.shelf-head{align-items:flex-start;flex-direction:column}
   .shelf-head>p{text-align:left}
