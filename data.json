@@ -50,23 +50,23 @@
         "id": "chronicles-of-ankhara",
         "title": "Chronicles of Ankhara",
         "mark": "CHRONICLES OF ANKHARA",
-        "logo": "images/logos/chronicles-of-ankhara.png",
+        "logo": "",
         "category": "Epic Fantasy Universe",
         "description": "An original fantasy world of Five Kingdoms, elemental faiths, ancient gods, and legends whose truth has been buried for centuries.",
         "url": "books/chronicles-of-ankhara/quest-for-the-godkiller/",
         "status": "Book One Available",
-        "background": "images/Chronicles_of_Ankhara_Quest_for_the_Godkiller_Cover.jpg"
+        "background": "images/chronicles-of-ankhara.jpg"
       },
       {
         "id": "knowall",
         "title": "KnowAll",
         "mark": "KNOWALL",
-        "logo": "images/logos/knowall.png",
+        "logo": "",
         "category": "Technological Thriller",
         "description": "An original novel about artificial intelligence, ambition, responsibility, and the dangerous difference between having answers and understanding consequences.",
         "url": "books/knowall/",
         "status": "Available Now",
-        "background": "images/knowall-cover.png"
+        "background": "images/knowall.jpg"
       }
     ],
     "comicsOriginals": [
@@ -74,12 +74,12 @@
         "id": "dark-tales",
         "title": "Dark Tales",
         "mark": "DARK TALES",
-        "logo": "images/logos/dark-tales.png",
+        "logo": "",
         "category": "Original Comic Series",
         "description": "Familiar stories return with darker consequences in an original shared mythology built around the mysterious Taletellers.",
         "url": "comics/dark-tales/",
         "status": "Series",
-        "background": "images/darktales-issue-1-cover.png"
+        "background": "images/dark-tales.jpg"
       }
     ],
     "comicsRemastered": [
@@ -87,12 +87,12 @@
         "id": "fantomah",
         "title": "Fantomah",
         "mark": "FANTOMAH",
-        "logo": "images/logos/fantomah.png",
+        "logo": "",
         "category": "Remastered Classic",
         "description": "A Golden Age supernatural jungle heroine restored, contextualized, and reintroduced through the AltWorld Comics Remastered Classics line.",
         "url": "comics/fantomah/",
         "status": "Series / Archive",
-        "background": "images/fantomah-issue-1-cover.png"
+        "background": "images/fantomah.jpg"
       }
     ]
   },

@@ -197,3 +197,22 @@ footer{border-top:1px solid var(--line);color:#837553;display:flex;justify-conte
   .library-tile{min-height:210px}
   .library-heading h1{font-size:38px}
 }
+
+
+/* Finished 1600×900 brand banners */
+.library-tile.finished-banner .library-art{
+  background-position:center;
+  background-size:cover;
+  filter:none;
+  transform:none;
+}
+.library-tile.finished-banner:hover .library-art{
+  transform:scale(1.025);
+  filter:brightness(1.04);
+}
+.library-tile.finished-banner .library-overlay{
+  background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(3,3,2,.18) 67%,rgba(3,3,2,.92) 100%);
+}
+.library-tile.finished-banner .library-info{
+  padding-top:34px;
+}
