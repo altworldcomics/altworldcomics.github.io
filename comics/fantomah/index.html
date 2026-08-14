@@ -32,7 +32,8 @@
   align-items:start;
 }
 .publication-history-art{
-  margin:42px 0 0;
+  align-self:center;
+  margin:0;
   border:1px solid rgba(215,184,92,.28);
   border-radius:14px;
   overflow:hidden;
@@ -64,6 +65,36 @@
     margin:0 auto;
   }
 }
+
+.fantomah-who{
+  grid-template-columns:1.12fr .78fr;
+  align-items:center;
+}
+.fantomah-who-portrait{
+  margin:0;
+  width:min(100%,330px);
+  justify-self:end;
+  border:1px solid rgba(215,184,92,.28);
+  border-radius:14px;
+  overflow:hidden;
+  background:#070604;
+  box-shadow:0 18px 42px rgba(0,0,0,.34);
+}
+.fantomah-who-portrait img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+@media(max-width:850px){
+  .fantomah-who{
+    grid-template-columns:1fr;
+  }
+  .fantomah-who-portrait{
+    width:min(100%,320px);
+    justify-self:center;
+  }
+}
+
 </style>
 
 </head>
@@ -136,7 +167,7 @@
 
 <section class="work-body series-body">
 
-<section class="work-section split-feature" id="who">
+<section class="work-section split-feature fantomah-who" id="who">
   <div class="feature-copy">
     <p class="eyebrow">The Character</p>
     <h2>Who Is Fantomah?</h2>
@@ -144,9 +175,8 @@
     <p>Her adventures mix jungle pulp with fantasy, horror, grotesque transformations, impossible science, strange civilizations, and sudden supernatural judgment. The result is a character who still feels unusual more than eight decades after her debut.</p>
     <p>That unpredictability is central to Fantomah's identity. She is protector, spirit, punisher, and pulp heroine at once — never comfortably fitting into a single genre.</p>
   </div>
-  <figure class="feature-art">
-    <img src="../../images/fantomah-issue-editorial.jpg" alt="AltWorld Comics Fantomah editorial overview">
-    <figcaption>AltWorld Comics editorial material introducing Fantomah and the Remastered Classics project.</figcaption>
+  <figure class="fantomah-who-portrait">
+    <img src="../../images/fantomah-portrait.jpg" alt="Portrait of Fantomah">
   </figure>
 </section>
 
