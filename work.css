@@ -1,4 +1,3 @@
-
 @import url("/styles.css");
 
 .work-hero{width:min(92vw,1180px);margin:38px auto 30px;display:grid;grid-template-columns:minmax(260px,360px) 1fr;gap:44px;align-items:center}
@@ -30,8 +29,8 @@
 
 /* Series / archive pages */
 .series-page{padding-bottom:20px}
-.series-banner{width:min(94vw,1320px);margin:28px auto 30px;border:1px solid rgba(215,184,92,.32);border-radius:18px;overflow:hidden;background:#070604;box-shadow:0 22px 60px rgba(0,0,0,.42)}
-.series-banner img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.series-logo-header{width:min(90vw,1180px);margin:22px auto 20px;display:flex;justify-content:center;align-items:center;min-height:120px}
+.series-logo-header img{display:block;width:min(760px,82vw);max-height:210px;object-fit:contain}
 .series-intro{width:min(90vw,1180px);margin:0 auto 28px;display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:start}
 .series-intro-copy h1{font-size:66px;line-height:.98;margin:8px 0 4px}
 .series-subtitle{margin:0 0 18px;color:var(--gold);font-size:24px;font-style:italic}
@@ -81,7 +80,8 @@
   .edition-card{grid-template-columns:130px 1fr}
 }
 @media(max-width:560px){
-  .series-banner{width:96vw;border-radius:12px}
+  .series-logo-header{width:94vw;margin:16px auto 10px;min-height:80px}
+  .series-logo-header img{width:min(640px,90vw);max-height:150px}
   .series-intro,.series-body,.series-jump{width:92vw}
   .series-intro-copy h1{font-size:42px}
   .edition-card{grid-template-columns:1fr}
