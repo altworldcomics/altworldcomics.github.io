@@ -23,6 +23,30 @@
   "publisher":{"@type":"Organization","name":"AltWorld Comics","url":"https://altworldcomics.github.io/"}
 }
 </script>
+
+<style>
+/* Fantomah character portrait: deliberately smaller than the adjacent copy. */
+#who.split-feature { align-items: center; }
+#who .fantomah-portrait-art {
+  justify-self: end;
+  width: min(100%, 340px);
+  margin: 0;
+}
+#who .fantomah-portrait-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(212, 169, 54, .38);
+}
+@media (max-width: 760px) {
+  #who .fantomah-portrait-art {
+    justify-self: center;
+    width: min(82vw, 320px);
+    margin-top: 1rem;
+  }
+}
+</style>
 </head>
 <body>
 <header class="topbar">
@@ -101,9 +125,8 @@
     <p>Her adventures mix jungle pulp with fantasy, horror, grotesque transformations, impossible science, strange civilizations, and sudden supernatural judgment. The result is a character who still feels unusual more than eight decades after her debut.</p>
     <p>That unpredictability is central to Fantomah's identity. She is protector, spirit, punisher, and pulp heroine at once — never comfortably fitting into a single genre.</p>
   </div>
-  <figure class="feature-art">
-    <img src="../../images/fantomah-issue-editorial.jpg" alt="AltWorld Comics Fantomah editorial overview">
-    <figcaption>AltWorld Comics editorial material introducing Fantomah and the Remastered Classics project.</figcaption>
+  <figure class="feature-art fantomah-portrait-art">
+    <img src="../../images/fantomah-portrait.jpg" alt="Portrait of Fantomah, Mystery Woman of the Jungle">
   </figure>
 </section>
 
