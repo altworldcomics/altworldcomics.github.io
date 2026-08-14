@@ -25,28 +25,47 @@
 </script>
 
 <style>
-/* Fantomah character portrait: deliberately smaller than the adjacent copy. */
-#who.split-feature { align-items: center; }
-#who .fantomah-portrait-art {
-  justify-self: end;
-  width: min(100%, 340px);
-  margin: 0;
+.publication-history-feature{
+  display:grid;
+  grid-template-columns:minmax(250px,340px) 1fr;
+  gap:38px;
+  align-items:start;
 }
-#who .fantomah-portrait-art img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 14px;
-  border: 1px solid rgba(212, 169, 54, .38);
+.publication-history-art{
+  margin:42px 0 0;
+  border:1px solid rgba(215,184,92,.28);
+  border-radius:14px;
+  overflow:hidden;
+  background:#070604;
+  box-shadow:0 18px 42px rgba(0,0,0,.34);
 }
-@media (max-width: 760px) {
-  #who .fantomah-portrait-art {
-    justify-self: center;
-    width: min(82vw, 320px);
-    margin-top: 1rem;
+.publication-history-art img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.publication-history-art figcaption{
+  padding:10px 13px;
+  color:var(--muted);
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  line-height:1.45;
+}
+.publication-history-copy .timeline{
+  margin-bottom:0;
+}
+@media(max-width:850px){
+  .publication-history-feature{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  .publication-history-art{
+    width:min(100%,360px);
+    margin:0 auto;
   }
 }
 </style>
+
 </head>
 <body>
 <header class="topbar">
@@ -125,36 +144,42 @@
     <p>Her adventures mix jungle pulp with fantasy, horror, grotesque transformations, impossible science, strange civilizations, and sudden supernatural judgment. The result is a character who still feels unusual more than eight decades after her debut.</p>
     <p>That unpredictability is central to Fantomah's identity. She is protector, spirit, punisher, and pulp heroine at once — never comfortably fitting into a single genre.</p>
   </div>
-  <figure class="feature-art fantomah-portrait-art">
-    <img src="../../images/fantomah-portrait.jpg" alt="Portrait of Fantomah, Mystery Woman of the Jungle">
+  <figure class="feature-art">
+    <img src="../../images/fantomah-issue-editorial.jpg" alt="AltWorld Comics Fantomah editorial overview">
+    <figcaption>AltWorld Comics editorial material introducing Fantomah and the Remastered Classics project.</figcaption>
   </figure>
 </section>
 
 <section class="work-section" id="history">
-  <p class="eyebrow">From 1940 to the Golden Age</p>
-  <h2>Publication History</h2>
-  <div class="timeline">
-    <article class="timeline-item">
-      <span class="timeline-year">1940</span>
-      <div><h3>The Debut</h3><p>Fantomah first appeared in <em>Jungle Comics #2</em> in February 1940. Fletcher Hanks, working under the name Barclay Flagg, introduced a mysterious supernatural woman whose powers and methods could be as frightening as the villains she confronted.</p></div>
-    </article>
-    <article class="timeline-item">
-      <span class="timeline-year">1940–42</span>
-      <div><h3>The Original Legend</h3><p>The earliest stories embraced the anything-can-happen energy of early comic books. Ivory hunters, mad scientists, monsters, lost civilizations, invaders, and supernatural threats could all enter Fantomah's jungle. Logic was less important than imagination and consequence.</p></div>
-    </article>
-    <article class="timeline-item">
-      <span class="timeline-year">1942</span>
-      <div><h3>Daughter of the Pharaohs</h3><p>The feature changed substantially during its run. Fantomah was reworked as an ancient Egyptian princess, and the stories moved away from the eerie supernatural avenger of the earliest Hanks material toward a more conventional jungle-adventure heroine.</p></div>
-    </article>
-    <article class="timeline-item">
-      <span class="timeline-year">1944</span>
-      <div><h3>End of the Original Run</h3><p>Her final Golden Age adventure appeared in <em>Jungle Comics #51</em>. The feature ended, but later generations of readers and comic historians rediscovered Fantomah as one of the era's most unusual creations.</p></div>
-    </article>
+  <div class="publication-history-feature">
+    <figure class="publication-history-art">
+      <img src="../../images/fantomah-restored-original-page.jpg" alt="Restored original Golden Age Fantomah comic page">
+      <figcaption>Restored page from Fantomah's original Golden Age run.</figcaption>
+    </figure>
+
+    <div class="publication-history-copy">
+      <p class="eyebrow">From 1940 to the Golden Age</p>
+      <h2>Publication History</h2>
+      <div class="timeline">
+        <article class="timeline-item">
+          <span class="timeline-year">1940</span>
+          <div><h3>The Debut</h3><p>Fantomah first appeared in <em>Jungle Comics #2</em> in February 1940. Fletcher Hanks, working under the name Barclay Flagg, introduced a mysterious supernatural woman whose powers and methods could be as frightening as the villains she confronted.</p></div>
+        </article>
+        <article class="timeline-item">
+          <span class="timeline-year">1940–42</span>
+          <div><h3>The Original Legend</h3><p>The earliest stories embraced the anything-can-happen energy of early comic books. Ivory hunters, mad scientists, monsters, lost civilizations, invaders, and supernatural threats could all enter Fantomah's jungle. Logic was less important than imagination and consequence.</p></div>
+        </article>
+        <article class="timeline-item">
+          <span class="timeline-year">1942</span>
+          <div><h3>Daughter of the Pharaohs</h3><p>The feature changed substantially during its run. Fantomah was reworked as an ancient Egyptian princess, and the stories moved away from the eerie supernatural avenger of the earliest Hanks material toward a more conventional jungle-adventure heroine.</p></div>
+        </article>
+        <article class="timeline-item">
+          <span class="timeline-year">1944</span>
+          <div><h3>End of the Original Run</h3><p>Her final Golden Age adventure appeared in <em>Jungle Comics #51</em>. The feature ended, but later generations of readers and comic historians rediscovered Fantomah as one of the era's most unusual creations.</p></div>
+        </article>
+      </div>
+    </div>
   </div>
-  <figure class="wide-editorial">
-    <img src="../../images/fantomah-legacy-editorial.jpg" alt="The legacy of Fantomah editorial timeline">
-    <figcaption>An illustrated AltWorld Comics overview of Fantomah's Golden Age legacy.</figcaption>
-  </figure>
 </section>
 
 <section class="work-section" id="legacy">
