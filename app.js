@@ -25,7 +25,9 @@ function renderSite(){
   renderPosts(siteData.posts||[]);
   renderBooks();
   renderComics();
-  renderStore("all");
+  const storeBrand=getStoreBrand();
+  renderStore(storeBrand ? `brand:${storeBrand}` : "all");
+  syncStoreFilterUI(storeBrand);
   renderAbout(siteData.about||{});
 }
 
@@ -64,14 +66,52 @@ function renderComics(){
   document.getElementById("originalsGrid").innerHTML=(brands.comicsOriginals||[]).map(brandCard).join("");
   document.getElementById("remasteredGrid").innerHTML=(brands.comicsRemastered||[]).map(brandCard).join("");
 }
+function getStoreBrand(){
+  return new URLSearchParams(location.search).get("brand")||"";
+}
+function brandLabel(brand){
+  if(brand==="fantomah") return "Fantomah";
+  return brand.replaceAll("-"," ").replace(/\b\w/g,c=>c.toUpperCase());
+}
 function renderStore(filter){
-  const items=(siteData.store||[]).filter(i=>filter==="all"||i.type===filter||i.collection===filter);
+  const items=(siteData.store||[]).filter(i=>{
+    if(filter==="all") return true;
+    if(filter.startsWith("brand:")) return i.brand===filter.slice(6);
+    return i.type===filter||i.collection===filter;
+  });
   document.getElementById("storeGrid").innerHTML=items.map(itemCard).join("");
+}
+function syncStoreFilterUI(brand){
+  const bar=document.querySelector(".filterbar");
+  if(!bar) return;
+  bar.querySelectorAll(".brand-filter-btn").forEach(b=>b.remove());
+  document.querySelectorAll(".filter-btn").forEach(x=>x.classList.remove("active"));
+  if(brand){
+    const btn=document.createElement("button");
+    btn.className="filter-btn brand-filter-btn active";
+    btn.dataset.filter=`brand:${brand}`;
+    btn.textContent=brandLabel(brand);
+    const allBtn=bar.querySelector('[data-filter="all"]');
+    allBtn?.insertAdjacentElement("afterend",btn);
+  }else{
+    bar.querySelector('[data-filter="all"]')?.classList.add("active");
+  }
+}
+function clearStoreBrandFromUrl(){
+  const url=new URL(location.href);
+  url.searchParams.delete("brand");
+  history.replaceState(null,"",url.pathname+(url.search||"")+location.hash);
 }
 function bindFilters(){
   document.querySelectorAll(".filter-btn").forEach(b=>b.addEventListener("click",()=>{
     document.querySelectorAll(".filter-btn").forEach(x=>x.classList.remove("active"));
-    b.classList.add("active"); renderStore(b.dataset.filter);
+    b.classList.add("active");
+    const filter=b.dataset.filter;
+    if(!filter.startsWith("brand:")){
+      document.querySelectorAll(".brand-filter-btn").forEach(x=>x.remove());
+      clearStoreBrandFromUrl();
+    }
+    renderStore(filter);
   }));
 }
 function renderPosts(posts){

@@ -143,7 +143,8 @@
       "image": "images/fantomah-issue-0-cover.png",
       "description": "A modern remastered presentation of a strange Golden Age public-domain heroine.",
       "detailUrl": "comics/fantomah/issue-0/",
-      "link": "https://a.co/d/0bMFV2Oh"
+      "link": "https://a.co/d/0bMFV2Oh",
+      "brand": "fantomah"
     },
     {
       "id": "fantomah-1",
@@ -155,7 +156,8 @@
       "image": "images/fantomah-issue-1-cover.png",
       "description": "Fantomah returns with newly presented jungle-horror adventures and restored classic material.",
       "detailUrl": "comics/fantomah/issue-1/",
-      "link": "https://a.co/d/07fZKxeq"
+      "link": "https://a.co/d/07fZKxeq",
+      "brand": "fantomah"
     }
   ],
   "about": {
