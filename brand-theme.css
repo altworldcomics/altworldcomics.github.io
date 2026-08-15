@@ -32,7 +32,7 @@ body{
 }
 .hero-strip{width:min(94vw,1500px);margin:18px auto 0}
 .hero-strip img{
-  width:100%;aspect-ratio:4/1;max-height:280px;object-fit:cover;object-position:center;
+  width:100%;aspect-ratio:4/1;max-height:280px;object-fit:cover;object-position:center top;
   border:1px solid #263b53;border-radius:12px;box-shadow:0 16px 38px rgba(0,0,0,.42);
 }
 .kicker,.section-title p,.eyebrow,.card-meta,.card-status,.brand-enter,.library-count-label{color:#4f9cff}
