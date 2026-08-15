@@ -1,0 +1,9 @@
+DEPLOY TARGET
+Copy the contents of this folder into:
+books/chronicles-of-ankhara/
+
+Important:
+- quest-for-the-godkiller/index.html replaces the current book page.
+- Character pages intentionally contain styled artwork placeholders on the left.
+- When final character images are ready, replace the placeholder div with an <img> using files stored in /images/.
+- Site navigation hierarchy is locked as HOME → STORIES → CHARACTERS → BOOKS.
