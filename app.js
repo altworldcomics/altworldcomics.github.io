@@ -1,5 +1,5 @@
 let siteData=null;
-const fallbackImg="images/banner.png";
+const fallbackImg="images/altworld-comics-banner.jpg";
 const safe=(v,f="")=>v||f;
 const esc=v=>String(v||"").replaceAll("&","&amp;").replaceAll('"',"&quot;").replaceAll("<","&lt;").replaceAll(">","&gt;");
 

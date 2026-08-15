@@ -1,17 +1,4 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>AltWorld Comics Admin</title>
-<style>
-body{margin:0;background:#060604;color:#f3e9cb;font-family:Arial,sans-serif}main{width:min(1100px,94vw);margin:35px auto}
-h1{font-family:Georgia,serif;color:#d7b85c}textarea{width:100%;min-height:70vh;background:#0b0a08;color:#f3e9cb;border:1px solid #4b3516;border-radius:14px;padding:16px;font:14px/1.5 Consolas,monospace}
-button{margin:12px 8px 0 0;padding:11px 18px;border-radius:999px;border:1px solid #d7b85c;background:#31120d;color:#f3e9cb;font-weight:800;cursor:pointer}
-p{color:#b8a982;line-height:1.6}
-</style></head><body><main><h1>AltWorld Comics Admin</h1>
-<p>This lightweight editor preserves the complete v2 data structure. Load <code>data.json</code>, edit the JSON, validate it, then download the replacement file.</p>
-<textarea id="editor"></textarea><br><button onclick="loadData()">Reload data.json</button><button onclick="validate()">Validate JSON</button><button onclick="download()">Download data.json</button><p id="status"></p>
-<script>
-const ed=document.getElementById('editor'),st=document.getElementById('status');
-async function loadData(){try{const r=await fetch('data.json?'+Date.now());const j=await r.json();ed.value=JSON.stringify(j,null,2);st.textContent='Loaded.'}catch(e){st.textContent='Error: '+e.message}}
-function validate(){try{JSON.parse(ed.value);st.textContent='Valid JSON.'}catch(e){st.textContent='Invalid JSON: '+e.message}}
-function download(){try{const j=JSON.parse(ed.value);const b=new Blob([JSON.stringify(j,null,2)+'\n'],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='data.json';a.click();URL.revokeObjectURL(a.href);st.textContent='Downloaded.'}catch(e){st.textContent='Invalid JSON: '+e.message}}
-loadData();
-</script></main></body></html>
+<style>body{margin:0;background:#05080d;color:#e8edf3;font-family:Arial,sans-serif}main{width:min(1100px,94vw);margin:35px auto}h1{font-family:Georgia,serif;color:#59a0ff}textarea{width:100%;min-height:70vh;background:#0a0f17;color:#e8edf3;border:1px solid #24364a;border-radius:14px;padding:16px;font:14px/1.5 Consolas,monospace}button{margin:12px 8px 0 0;padding:11px 18px;border-radius:999px;border:1px solid #4f9cff;background:#0d5fcb;color:#f5f8fc;font-weight:800;cursor:pointer}p{color:#9aa8b8;line-height:1.6}</style></head><body><main><h1>AltWorld Comics Admin</h1><p>This lightweight editor preserves the complete v2 data structure. Load <code>data.json</code>, edit the JSON, validate it, then download the replacement file.</p><textarea id="editor"></textarea><br><button onclick="loadData()">Reload data.json</button><button onclick="validate()">Validate JSON</button><button onclick="download()">Download data.json</button><p id="status"></p>
+<script>const ed=document.getElementById('editor'),st=document.getElementById('status');async function loadData(){try{const r=await fetch('data.json?'+Date.now());const j=await r.json();ed.value=JSON.stringify(j,null,2);st.textContent='Loaded.'}catch(e){st.textContent='Error: '+e.message}}function validate(){try{JSON.parse(ed.value);st.textContent='Valid JSON.'}catch(e){st.textContent='Invalid JSON: '+e.message}}function download(){try{const j=JSON.parse(ed.value);const b=new Blob([JSON.stringify(j,null,2)+'\n'],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='data.json';a.click();URL.revokeObjectURL(a.href);st.textContent='Downloaded.'}catch(e){st.textContent='Invalid JSON: '+e.message}}loadData();</script></main></body></html>
