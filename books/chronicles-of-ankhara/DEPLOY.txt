@@ -2,8 +2,24 @@ DEPLOY TARGET
 Copy the contents of this folder into:
 books/chronicles-of-ankhara/
 
-Important:
-- quest-for-the-godkiller/index.html replaces the current book page.
-- Character pages intentionally contain styled artwork placeholders on the left.
-- When final character images are ready, replace the placeholder div with an <img> using files stored in /images/.
-- Site navigation hierarchy is locked as HOME → STORIES → CHARACTERS → BOOKS.
+This version replaces the previous Ankhara microsite files.
+
+Navigation hierarchy:
+HOME → STORIES → CHARACTERS → BOOKS
+
+Sequential navigation added:
+- Origins of Ankhara → The Modern Ankhara
+- Tuth → Nisha → Sophrus → Arctus → Ashka → Bree → Elaria → Shadow
+- Every detail page also links back to its index.
+
+Character artwork:
+The left-side artwork slots are intentionally placeholders.
+Suggested image filenames:
+images/ankhara-tuth-sheet.jpg
+images/ankhara-nisha-sheet.jpg
+images/ankhara-sophrus-sheet.jpg
+images/ankhara-arctus-sheet.jpg
+images/ankhara-ashka-sheet.jpg
+images/ankhara-bree-sheet.jpg
+images/ankhara-elaria-sheet.jpg
+images/ankhara-shadow-sheet.jpg
