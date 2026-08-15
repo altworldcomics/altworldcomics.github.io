@@ -30,10 +30,18 @@ body{
   background:rgba(22,119,255,.11);
   border-color:rgba(61,145,255,.42);
 }
-.hero-strip{width:min(94vw,1500px);margin:18px auto 0}
+.hero-strip{
+  width:min(92vw,1200px);
+  margin:18px auto 0;
+}
 .hero-strip img{
-  width:100%;aspect-ratio:4/1;max-height:280px;object-fit:cover;object-position:center;
-  border:1px solid #263b53;border-radius:12px;box-shadow:0 16px 38px rgba(0,0,0,.42);
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:contain;
+  border:1px solid #263b53;
+  border-radius:12px;
+  box-shadow:0 16px 38px rgba(0,0,0,.42);
 }
 .kicker,.section-title p,.eyebrow,.card-meta,.card-status,.brand-enter,.library-count-label{color:#4f9cff}
 .intro-panel .lead,.catalog-intro,.card p,.portal-card p,.subhead p,.about-card p,.shelf-head>p{color:#a7b3c1}
@@ -93,5 +101,6 @@ footer{border-top-color:#203247;color:#718196}
 .edition-card.featured{background:linear-gradient(145deg,rgba(22,119,255,.12),rgba(255,255,255,.02))}
 
 @media(max-width:860px){
-  .hero-strip img{aspect-ratio:16/5.2;max-height:260px}
+  .hero-strip{width:min(94vw,1200px)}
+  .hero-strip img{width:100%;height:auto}
 }
