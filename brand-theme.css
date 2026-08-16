@@ -332,3 +332,87 @@ footer{border-top-color:#203247;color:#718196}
 @media(max-width:560px){
   .nav-link{font-size:13px}
 }
+
+
+/* =========================================================
+   ALTWORLD PUBLISHER FOOTER
+   ========================================================= */
+footer{
+  width:min(92vw,1180px);
+  margin:64px auto 0;
+  padding:24px 0 20px;
+  border-top:1px solid #203247;
+  display:grid;
+  grid-template-columns:42px auto 1fr;
+  grid-template-areas:
+    "logo brand tagline"
+    "legal legal legal";
+  align-items:center;
+  column-gap:14px;
+  row-gap:18px;
+  color:#718196;
+  font-family:Arial,sans-serif;
+  font-size:12px;
+}
+
+footer::before{
+  content:"";
+  grid-area:logo;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:url("/images/altworld-comics-logo.jpg") center/cover no-repeat;
+  box-shadow:0 0 0 1px rgba(76,151,255,.20);
+}
+
+footer span:first-child{
+  grid-area:brand;
+  color:#dfe6ee;
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:1.4px;
+  white-space:nowrap;
+}
+
+footer span:last-child{
+  grid-area:tagline;
+  justify-self:end;
+  color:#7f8fa2;
+  font-size:12px;
+  letter-spacing:.3px;
+  text-align:right;
+}
+
+footer::after{
+  content:"© 2026 AltWorld Comics · Independent publishing";
+  grid-area:legal;
+  display:block;
+  padding-top:15px;
+  border-top:1px solid rgba(76,151,255,.14);
+  color:#566679;
+  font-size:10px;
+  letter-spacing:.4px;
+  text-transform:uppercase;
+}
+
+@media(max-width:700px){
+  footer{
+    grid-template-columns:42px 1fr;
+    grid-template-areas:
+      "logo brand"
+      "logo tagline"
+      "legal legal";
+    row-gap:5px;
+    margin-top:48px;
+  }
+
+  footer span:last-child{
+    justify-self:start;
+    text-align:left;
+    font-size:11px;
+  }
+
+  footer::after{
+    margin-top:12px;
+  }
+}
