@@ -599,3 +599,57 @@ footer .footer-social svg{
   .about-creator{grid-template-columns:1fr}
   .creator-links{justify-content:flex-start}
 }
+
+
+/* =========================================================
+   FINAL AUTHOR PROFILE
+   ========================================================= */
+.about-creator{
+  display:grid;
+  grid-template-columns:190px minmax(0,1fr);
+  gap:28px;
+  align-items:start;
+  padding:28px 0;
+  margin:0 0 28px;
+  border-top:1px solid rgba(76,151,255,.18);
+  border-bottom:1px solid rgba(76,151,255,.18);
+}
+.creator-photo{
+  width:190px;
+}
+.creator-photo img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:270px;
+  object-fit:cover;
+  object-position:center 24%;
+  border:1px solid rgba(76,151,255,.45);
+  border-radius:10px;
+  box-shadow:0 12px 28px rgba(0,0,0,.30);
+}
+.about-creator h2{
+  font-size:22px;
+  line-height:1.15;
+  margin:4px 0 12px;
+}
+.about-creator .creator-copy>p:not(.eyebrow){
+  font-size:14px;
+  line-height:1.65;
+  color:#a7b3c1;
+  max-width:720px;
+  margin:0 0 11px;
+}
+.about-creator .creator-links{
+  justify-content:flex-start;
+  margin-top:17px;
+}
+@media(max-width:700px){
+  .about-creator{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  .creator-photo{
+    width:min(220px,65vw);
+  }
+}
