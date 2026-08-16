@@ -130,13 +130,22 @@ function renderPosts(posts){
     <div class="card-body"><div class="card-meta">${esc(p.date)}</div><h3>${esc(p.title)}</h3><p>${esc(p.excerpt)}</p>
     <button class="btn" onclick="openPost(${i})">Read More</button></div></article>`).join("");
 }
+
+/* About is now mostly static HTML. Keep this renderer backward-compatible and null-safe. */
 function renderAbout(a){
-  document.getElementById("aboutHeading").textContent=safe(a.heading,"About AltWorld Comics");
-  document.getElementById("aboutBody").textContent=safe(a.body,"");
-  document.getElementById("aboutContact").textContent=safe(a.contact,"");
-  document.getElementById("aboutX").href=safe(a.x,"#");
-  document.getElementById("aboutInstagram").href=safe(a.instagram,"#");
+  const heading=document.getElementById("aboutHeading");
+  const body=document.getElementById("aboutBody");
+  const contact=document.getElementById("aboutContact");
+  const x=document.getElementById("aboutX");
+  const instagram=document.getElementById("aboutInstagram");
+
+  if(heading) heading.textContent=safe(a.heading,"About AltWorld Comics");
+  if(body) body.textContent=safe(a.body,"");
+  if(contact) contact.textContent=safe(a.contact,"");
+  if(x) x.href=safe(a.x,"#");
+  if(instagram) instagram.href=safe(a.instagram,"#");
 }
+
 function closePost(){const m=document.getElementById("postModal");m.classList.remove("open");m.setAttribute("aria-hidden","true");document.body.style.overflow=""}
 window.closePost=closePost;
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closePost()});
