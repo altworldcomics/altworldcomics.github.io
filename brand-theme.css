@@ -416,3 +416,88 @@ footer::after{
     margin-top:12px;
   }
 }
+
+
+/* =========================================================
+   SOCIAL FOOTER ICONS
+   ========================================================= */
+footer.altworld-footer{
+  grid-template-columns:42px auto 1fr auto;
+  grid-template-areas:
+    "logo brand social tagline"
+    "legal legal legal legal";
+}
+
+footer .footer-social{
+  grid-area:social;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:0 18px;
+}
+
+footer .footer-social a{
+  width:34px;
+  height:34px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(116,147,181,.30);
+  border-radius:50%;
+  color:#8798aa;
+  background:rgba(255,255,255,.018);
+  text-decoration:none;
+  transition:
+    color .18s ease,
+    border-color .18s ease,
+    background .18s ease,
+    transform .18s ease,
+    box-shadow .18s ease;
+}
+
+footer .footer-social a:hover,
+footer .footer-social a:focus-visible{
+  color:#65a9ff;
+  border-color:rgba(76,151,255,.70);
+  background:rgba(22,119,255,.09);
+  transform:translateY(-2px);
+  box-shadow:0 7px 18px rgba(0,79,180,.14);
+  outline:none;
+}
+
+footer .footer-social svg{
+  width:16px;
+  height:16px;
+  display:block;
+  fill:currentColor;
+}
+
+@media(max-width:800px){
+  footer.altworld-footer{
+    grid-template-columns:42px 1fr auto;
+    grid-template-areas:
+      "logo brand social"
+      "logo tagline tagline"
+      "legal legal legal";
+  }
+  footer .footer-social{
+    justify-content:flex-end;
+    padding:0;
+  }
+}
+
+@media(max-width:520px){
+  footer.altworld-footer{
+    grid-template-columns:42px 1fr;
+    grid-template-areas:
+      "logo brand"
+      "logo tagline"
+      "social social"
+      "legal legal";
+  }
+  footer .footer-social{
+    justify-content:flex-start;
+    padding-top:12px;
+  }
+}
