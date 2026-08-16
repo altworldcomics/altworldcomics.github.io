@@ -229,8 +229,8 @@ footer{border-top-color:#203247;color:#718196}
 
 /* Slightly tighter navigation/buttons */
 .nav-link{
-  font-size:13px;
-  padding:9px 14px;
+  font-size:15px;
+  padding:9px 15px;
 }
 
 .btn{
@@ -324,3 +324,11 @@ footer{border-top-color:#203247;color:#718196}
 .library-shelf{margin:30px 0 46px}
 .section-title h1,.section-title h2{letter-spacing:.2px}
 .portal-card{padding:28px;min-height:260px}
+
+
+@media(max-width:860px){
+  .nav-link{font-size:14px}
+}
+@media(max-width:560px){
+  .nav-link{font-size:13px}
+}
