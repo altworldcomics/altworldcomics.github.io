@@ -115,13 +115,13 @@ footer{border-top-color:#203247;color:#718196}
 
 .section-title h1,
 .section-title h2{
-  font-size:28px;
-  line-height:1.08;
-  margin-bottom:20px;
+  font-size:22px;
+  line-height:1.12;
+  margin-bottom:16px;
 }
 
 .library-heading h1{
-  font-size:30px;
+  font-size:24px;
   margin-bottom:12px;
 }
 
@@ -131,7 +131,7 @@ footer{border-top-color:#203247;color:#718196}
 }
 
 .shelf-head h2{
-  font-size:24px;
+  font-size:20px;
 }
 
 .brand-copy h3{
@@ -154,7 +154,7 @@ footer{border-top-color:#203247;color:#718196}
 }
 
 .portal-card h2{
-  font-size:26px;
+  font-size:22px;
 }
 
 .portal-card p{
@@ -163,7 +163,7 @@ footer{border-top-color:#203247;color:#718196}
 }
 
 .subhead h2{
-  font-size:24px;
+  font-size:21px;
 }
 
 .about-card p{
@@ -172,7 +172,7 @@ footer{border-top-color:#203247;color:#718196}
 }
 
 .modal-post h2{
-  font-size:28px;
+  font-size:23px;
 }
 
 .modal-text{
@@ -182,7 +182,7 @@ footer{border-top-color:#203247;color:#718196}
 
 /* Standalone work pages */
 .work-copy h1{
-  font-size:36px;
+  font-size:28px;
   line-height:1.04;
 }
 
@@ -192,11 +192,11 @@ footer{border-top-color:#203247;color:#718196}
 }
 
 .work-section h2{
-  font-size:25px;
+  font-size:21px;
 }
 
 .work-section h3{
-  font-size:20px;
+  font-size:18px;
 }
 
 .work-section p,
@@ -210,12 +210,12 @@ footer{border-top-color:#203247;color:#718196}
 }
 
 .series-intro-copy h1{
-  font-size:38px;
+  font-size:30px;
   line-height:1;
 }
 
 .series-subtitle{
-  font-size:19px;
+  font-size:17px;
 }
 
 .series-intro-copy .deck{
@@ -252,19 +252,19 @@ footer{border-top-color:#203247;color:#718196}
 
   .section-title h1,
   .section-title h2{
-    font-size:25px;
+    font-size:21px;
   }
 
   .library-heading h1{
-    font-size:27px;
+    font-size:23px;
   }
 
   .portal-card h2{
-    font-size:24px;
+    font-size:21px;
   }
 
   .work-copy h1{
-    font-size:31px;
+    font-size:26px;
   }
 
   .work-copy .deck{
@@ -272,7 +272,7 @@ footer{border-top-color:#203247;color:#718196}
   }
 
   .series-intro-copy h1{
-    font-size:33px;
+    font-size:28px;
   }
 
   .series-subtitle{
@@ -280,11 +280,11 @@ footer{border-top-color:#203247;color:#718196}
   }
 
   .work-section h2{
-    font-size:23px;
+    font-size:20px;
   }
 
   .modal-post h2{
-    font-size:25px;
+    font-size:22px;
   }
 
   .modal-text{
@@ -295,19 +295,19 @@ footer{border-top-color:#203247;color:#718196}
 @media(max-width:560px){
   .section-title h1,
   .section-title h2{
-    font-size:23px;
+    font-size:20px;
   }
 
   .library-heading h1{
-    font-size:25px;
+    font-size:22px;
   }
 
   .work-copy h1{
-    font-size:28px;
+    font-size:24px;
   }
 
   .series-intro-copy h1{
-    font-size:30px;
+    font-size:26px;
   }
 
   .work-section p,
@@ -315,3 +315,12 @@ footer{border-top-color:#203247;color:#718196}
     font-size:15px;
   }
 }
+
+
+/* Compact vertical rhythm */
+.content-wrap{margin:38px auto}
+.page-top{margin-top:38px}
+.library-heading{margin-bottom:26px}
+.library-shelf{margin:30px 0 46px}
+.section-title h1,.section-title h2{letter-spacing:.2px}
+.portal-card{padding:28px;min-height:260px}
