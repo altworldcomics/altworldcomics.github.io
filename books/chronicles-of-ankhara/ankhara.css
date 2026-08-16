@@ -37,7 +37,7 @@
 .character-select-card:hover .character-select-name,.character-select-card:focus-visible .character-select-name{color:#f1d989;text-shadow:0 0 12px rgba(215,184,92,.18)}
 .character-select-card:focus-visible{outline:none}
 @media(max-width:900px){.character-select-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.character-select-header h1{font-size:46px}}
-@media(max-width:520px){.character-select-grid{gap:14px}.character-select-name{font-size:17px;margin-top:8px}.character-select-header{margin-top:30px}.character-select-header h1{font-size:38px}}
+@media(max-width:520px){.character-select-grid{gap:14px}.character-select-name{font-size:17px;margin-top:8px}.character-select-header{margin-top:30px}.character-select-header h1{font-size:28px}}
 
 /* AltWorld Comics publisher chrome — blue / steel identity.
    Ankhara content itself intentionally keeps its gold fantasy palette. */
@@ -57,45 +57,53 @@ footer{border-top-color:#203247!important;color:#718196!important}
 .ankhara-subnav a{font-size:10px;padding:7px 10px}
 
 .ankhara-hero{margin-top:32px}
-.ankhara-hero h1{font-size:46px;line-height:1;margin-bottom:11px}
-.ankhara-hero .deck{font-size:16px;line-height:1.6}
+.ankhara-hero h1{font-size:30px;line-height:1;margin-bottom:11px}
+.ankhara-hero .deck{font-size:15px;line-height:1.6}
 .ankhara-kicker{font-size:10px}
 
 .ankhara-card{padding:21px;min-height:205px}
-.ankhara-card h2{font-size:24px}
+.ankhara-card h2{font-size:21px}
 .ankhara-card h3{font-size:19px}
 .ankhara-card p{font-size:14px;line-height:1.6}
 
 .index-card{padding:21px}
-.index-card h2{font-size:24px}
+.index-card h2{font-size:21px}
 .index-card h3{font-size:19px}
 .index-card p{font-size:14px;line-height:1.6}
 
-.story-page h1{font-size:40px;line-height:1.04}
+.story-page h1{font-size:28px;line-height:1.04}
 .story-page .lede{font-size:16px;line-height:1.6}
 .story-page p{font-size:15px;line-height:1.75}
 .story-note{font-size:14px}
 
-.character-copy h1{font-size:42px;line-height:1}
-.character-role{font-size:18px}
+.character-copy h1{font-size:30px;line-height:1}
+.character-role{font-size:17px}
 .character-copy p{font-size:15px;line-height:1.7}
 .character-meta dt{font-size:9px}
 .character-meta dd{font-size:14px}
-.appears-in h2{font-size:23px}
+.appears-in h2{font-size:20px}
 
-.character-select-header h1{font-size:38px}
-.character-select-name{font-size:18px}
+.character-select-header h1{font-size:28px}
+.character-select-name{font-size:17px}
 
 .sequence-name{font-size:14px}
 .sequence-label{font-size:8px}
 .sequence-index{font-size:9px}
 
 @media(max-width:850px){
-  .character-copy h1,.story-page h1,.ankhara-hero h1{font-size:34px}
+  .character-copy h1,.story-page h1,.ankhara-hero h1{font-size:26px}
   .ankhara-hero .deck{font-size:15px}
 }
 @media(max-width:520px){
-  .character-select-header h1{font-size:30px}
+  .character-select-header h1{font-size:24px}
   .character-select-name{font-size:15px}
-  .character-copy h1,.story-page h1,.ankhara-hero h1{font-size:31px}
+  .character-copy h1,.story-page h1,.ankhara-hero h1{font-size:24px}
 }
+
+
+/* Compact vertical rhythm */
+.ankhara-hero{margin-top:28px;margin-bottom:22px}
+.ankhara-grid{margin-top:24px;margin-bottom:56px}
+.story-list,.character-list,.book-list{margin-top:26px;margin-bottom:56px}
+.story-page,.character-sheet{margin-top:28px;margin-bottom:56px}
+.character-select-header{margin:34px auto 22px}
