@@ -39,7 +39,6 @@
 @media(max-width:900px){.character-select-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.character-select-header h1{font-size:46px}}
 @media(max-width:520px){.character-select-grid{gap:14px}.character-select-name{font-size:17px;margin-top:8px}.character-select-header{margin-top:30px}.character-select-header h1{font-size:38px}}
 
-
 /* AltWorld Comics publisher chrome — blue / steel identity.
    Ankhara content itself intentionally keeps its gold fantasy palette. */
 .topbar{background:rgba(4,8,14,.97)!important;border-bottom:1px solid #203247!important;box-shadow:0 8px 28px rgba(0,0,0,.28)}
@@ -49,3 +48,54 @@
 .topbar .nav-link{color:#93a2b4!important}
 .topbar .nav-link:hover,.topbar .nav-link.active{color:#59a0ff!important;background:rgba(22,119,255,.11)!important;border-color:rgba(61,145,255,.42)!important}
 footer{border-top-color:#203247!important;color:#718196!important}
+
+/* =========================================================
+   COMPACT TYPOGRAPHY — Ankhara
+   ========================================================= */
+.topbar .brand-wrap span{font-size:18px}
+.topbar .nav-link{font-size:12px;padding:8px 13px}
+.ankhara-subnav a{font-size:10px;padding:7px 10px}
+
+.ankhara-hero{margin-top:32px}
+.ankhara-hero h1{font-size:46px;line-height:1;margin-bottom:11px}
+.ankhara-hero .deck{font-size:16px;line-height:1.6}
+.ankhara-kicker{font-size:10px}
+
+.ankhara-card{padding:21px;min-height:205px}
+.ankhara-card h2{font-size:24px}
+.ankhara-card h3{font-size:19px}
+.ankhara-card p{font-size:14px;line-height:1.6}
+
+.index-card{padding:21px}
+.index-card h2{font-size:24px}
+.index-card h3{font-size:19px}
+.index-card p{font-size:14px;line-height:1.6}
+
+.story-page h1{font-size:40px;line-height:1.04}
+.story-page .lede{font-size:16px;line-height:1.6}
+.story-page p{font-size:15px;line-height:1.75}
+.story-note{font-size:14px}
+
+.character-copy h1{font-size:42px;line-height:1}
+.character-role{font-size:18px}
+.character-copy p{font-size:15px;line-height:1.7}
+.character-meta dt{font-size:9px}
+.character-meta dd{font-size:14px}
+.appears-in h2{font-size:23px}
+
+.character-select-header h1{font-size:38px}
+.character-select-name{font-size:18px}
+
+.sequence-name{font-size:14px}
+.sequence-label{font-size:8px}
+.sequence-index{font-size:9px}
+
+@media(max-width:850px){
+  .character-copy h1,.story-page h1,.ankhara-hero h1{font-size:34px}
+  .ankhara-hero .deck{font-size:15px}
+}
+@media(max-width:520px){
+  .character-select-header h1{font-size:30px}
+  .character-select-name{font-size:15px}
+  .character-copy h1,.story-page h1,.ankhara-hero h1{font-size:31px}
+}
