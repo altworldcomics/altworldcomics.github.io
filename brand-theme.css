@@ -100,7 +100,218 @@ footer{border-top-color:#203247;color:#718196}
 .remaster-principles{background:linear-gradient(180deg,rgba(22,119,255,.07),rgba(255,255,255,.015))}
 .edition-card.featured{background:linear-gradient(145deg,rgba(22,119,255,.12),rgba(255,255,255,.02))}
 
+/* =========================================================
+   COMPACT TYPOGRAPHY SCALE
+   Keeps hierarchy while making the whole site feel tighter,
+   more editorial and less oversized.
+   ========================================================= */
+
+.brand-wrap span{font-size:19px}
+
+.intro-panel .lead{
+  font-size:16px;
+  line-height:1.6;
+}
+
+.section-title h1,
+.section-title h2{
+  font-size:36px;
+  line-height:1.08;
+  margin-bottom:20px;
+}
+
+.library-heading h1{
+  font-size:40px;
+  margin-bottom:12px;
+}
+
+.catalog-intro{
+  font-size:16px;
+  line-height:1.6;
+}
+
+.shelf-head h2{
+  font-size:28px;
+}
+
+.brand-copy h3{
+  font-size:27px;
+}
+
+.brand-copy p{
+  font-size:15px;
+  line-height:1.55;
+}
+
+.card h3{
+  font-size:21px;
+  line-height:1.18;
+}
+
+.card p{
+  font-size:14px;
+  line-height:1.5;
+}
+
+.portal-card h2{
+  font-size:34px;
+}
+
+.portal-card p{
+  font-size:16px;
+  line-height:1.5;
+}
+
+.subhead h2{
+  font-size:29px;
+}
+
+.about-card p{
+  font-size:16px;
+  line-height:1.7;
+}
+
+.modal-post h2{
+  font-size:34px;
+}
+
+.modal-text{
+  font-size:16px;
+  line-height:1.75;
+}
+
+/* Standalone work pages */
+.work-copy h1{
+  font-size:46px;
+  line-height:1.04;
+}
+
+.work-copy .deck{
+  font-size:18px;
+  line-height:1.5;
+}
+
+.work-section h2{
+  font-size:30px;
+}
+
+.work-section h3{
+  font-size:22px;
+}
+
+.work-section p,
+.work-section li{
+  font-size:16px;
+  line-height:1.7;
+}
+
+.wiki-table td{
+  font-size:15px;
+}
+
+.series-intro-copy h1{
+  font-size:54px;
+  line-height:1;
+}
+
+.series-subtitle{
+  font-size:21px;
+}
+
+.series-intro-copy .deck{
+  font-size:17px;
+  line-height:1.6;
+}
+
+.edition-copy p{
+  font-size:15px;
+}
+
+/* Slightly tighter navigation/buttons */
+.nav-link{
+  font-size:13px;
+  padding:9px 14px;
+}
+
+.btn{
+  min-height:39px;
+  padding:0 16px;
+  font-size:11px;
+}
+
+.filter-btn{
+  font-size:13px;
+  padding:8px 13px;
+}
+
 @media(max-width:860px){
   .hero-strip{width:min(94vw,1200px)}
   .hero-strip img{width:100%;height:auto}
+
+  .brand-wrap span{font-size:17px}
+
+  .section-title h1,
+  .section-title h2{
+    font-size:28px;
+  }
+
+  .library-heading h1{
+    font-size:32px;
+  }
+
+  .portal-card h2{
+    font-size:29px;
+  }
+
+  .work-copy h1{
+    font-size:36px;
+  }
+
+  .work-copy .deck{
+    font-size:17px;
+  }
+
+  .series-intro-copy h1{
+    font-size:42px;
+  }
+
+  .series-subtitle{
+    font-size:19px;
+  }
+
+  .work-section h2{
+    font-size:27px;
+  }
+
+  .modal-post h2{
+    font-size:28px;
+  }
+
+  .modal-text{
+    font-size:15px;
+  }
+}
+
+@media(max-width:560px){
+  .section-title h1,
+  .section-title h2{
+    font-size:26px;
+  }
+
+  .library-heading h1{
+    font-size:30px;
+  }
+
+  .work-copy h1{
+    font-size:33px;
+  }
+
+  .series-intro-copy h1{
+    font-size:36px;
+  }
+
+  .work-section p,
+  .work-section li{
+    font-size:15px;
+  }
 }
