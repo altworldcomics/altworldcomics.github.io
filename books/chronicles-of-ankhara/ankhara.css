@@ -209,3 +209,81 @@ footer{border-top-color:#203247!important;color:#718196!important}
     font-size:22px;
   }
 }
+
+
+/* =========================================================
+   ANKHARA HOME — final compact content scale
+   ========================================================= */
+.work-body{
+  width:min(90vw,980px);
+  margin:24px auto 52px;
+}
+
+.work-section h2{
+  font-size:18px;
+  line-height:1.2;
+  margin:0 0 10px;
+}
+
+.work-section p,
+.work-section li{
+  font-size:14px;
+  line-height:1.6;
+}
+
+.ankhara-card h2,
+.index-card h2,
+.appears-in h2{
+  font-size:18px;
+  line-height:1.2;
+}
+
+.ankhara-card h3,
+.index-card h3{
+  font-size:17px;
+}
+
+.ankhara-card p,
+.index-card p{
+  font-size:13px;
+  line-height:1.55;
+}
+
+.ankhara-card{
+  padding:20px;
+  min-height:190px;
+}
+
+@media(max-width:850px){
+  .work-section h2{font-size:18px}
+  .work-section p,
+  .work-section li{font-size:14px}
+}
+
+@media(max-width:520px){
+  .work-section h2{font-size:17px}
+  .ankhara-card h2,
+  .index-card h2{font-size:17px}
+}
+
+
+/* =========================================================
+   GLOBAL HEADER MATCH — same scale as main AltWorld site
+   ========================================================= */
+.topbar .brand-wrap span{
+  font-size:19px;
+}
+
+.topbar .nav-link{
+  font-size:15px;
+  padding:9px 15px;
+}
+
+@media(max-width:860px){
+  .topbar .brand-wrap span{font-size:17px}
+  .topbar .nav-link{font-size:14px}
+}
+
+@media(max-width:560px){
+  .topbar .nav-link{font-size:13px}
+}
