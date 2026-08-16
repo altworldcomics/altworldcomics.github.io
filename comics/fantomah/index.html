@@ -17,7 +17,29 @@
 .publication-history-copy .timeline{margin-bottom:0}.fantomah-who{grid-template-columns:1.12fr .78fr;align-items:center}
 .fantomah-who-portrait{margin:0;width:min(100%,330px);justify-self:end;border:1px solid rgba(215,184,92,.28);border-radius:14px;overflow:hidden;background:#070604;box-shadow:0 18px 42px rgba(0,0,0,.34)}
 .fantomah-who-portrait img{display:block;width:100%;height:auto}
-@media(max-width:850px){.publication-history-feature,.fantomah-who{grid-template-columns:1fr}.publication-history-art{width:min(100%,360px);margin:0 auto}.fantomah-who-portrait{width:min(100%,320px);justify-self:center}}
+
+/* Slightly stronger emphasis for the current AltWorld releases */
+.fantomah-page #editions{
+  margin-top:12px;
+  padding-top:34px;
+  border-top:1px solid rgba(76,151,255,.34);
+}
+.fantomah-page #editions>h2{margin-bottom:22px}
+.fantomah-page #editions .edition-grid{gap:22px}
+.fantomah-page #editions .edition-card{
+  border-color:rgba(76,151,255,.38);
+  background:linear-gradient(180deg,rgba(18,29,43,.90),rgba(8,13,21,.98));
+  box-shadow:0 18px 38px rgba(0,0,0,.32);
+}
+.fantomah-page #editions .edition-card:hover{border-color:rgba(76,151,255,.62)}
+.fantomah-page #editions .edition-cover img{width:100%;height:auto;display:block}
+.fantomah-page #editions .card-actions{margin-top:14px}
+
+@media(max-width:850px){
+  .publication-history-feature,.fantomah-who{grid-template-columns:1fr}
+  .publication-history-art{width:min(100%,360px);margin:0 auto}
+  .fantomah-who-portrait{width:min(100%,320px);justify-self:center}
+}
 </style></head>
 <body>
 <header class="topbar"><a class="brand-wrap" href="../../"><img class="site-logo" src="../../images/altworld-comics-logo.jpg" alt="AltWorld Comics logo"><span>ALTWORLD COMICS</span></a>
@@ -58,9 +80,8 @@
 <p>The result is designed to work as both an entry point for a new reader and a small archive for someone curious about where the character came from.</p></div>
 <aside class="remaster-principles"><p class="eyebrow">Our Approach</p><ul><li><strong>Preserve</strong> the original character and creator history.</li><li><strong>Contextualize</strong> the material for readers discovering it today.</li><li><strong>Re-present</strong> difficult-to-find public-domain stories in a modern digital format.</li><li><strong>Differentiate</strong> historical material from new AltWorld additions.</li></ul></aside></section>
 <section class="work-section" id="editions"><p class="eyebrow">Read Fantomah</p><h2>AltWorld Editions</h2><div class="edition-grid">
-<article class="edition-card"><a class="edition-cover" href="issue-0/"><img src="../../images/fantomah-issue-0.webp" alt="Fantomah Issue 0 cover"></a><div class="edition-copy"><span class="edition-label">Introductory Edition</span><h3>Fantomah #0</h3><p>An introductory release establishing the visual and editorial direction of the AltWorld Fantomah project.</p><a class="btn secondary" href="issue-0/">Explore Issue #0</a></div></article>
+<article class="edition-card"><a class="edition-cover" href="issue-0/"><img src="../../images/fantomah-issue-0.webp" alt="Fantomah Issue 0 cover"></a><div class="edition-copy"><span class="edition-label">Introductory Edition</span><h3>Fantomah #0</h3><p>An introductory release establishing the visual and editorial direction of the AltWorld Fantomah project.</p><div class="card-actions"><a class="btn secondary" href="issue-0/">Explore Issue #0</a><a class="btn" href="https://a.co/d/0bMFV2Oh" target="_blank" rel="noopener">Amazon ↗</a></div></div></article>
 <article class="edition-card featured"><a class="edition-cover" href="issue-1/"><img src="../../images/fantomah-issue-1.webp" alt="Fantomah Issue 1 cover"></a><div class="edition-copy"><span class="edition-label">Latest Release</span><h3>Fantomah #1</h3><p>A Remastered Classics release pairing Golden Age Fantomah material with a modern presentation and new editorial context.</p><div class="card-actions"><a class="btn secondary" href="issue-1/">Explore Issue #1</a><a class="btn" href="https://a.co/d/07fZKxeq" target="_blank" rel="noopener">Amazon ↗</a></div></div></article>
 </div></section>
-<section class="work-section archive-note"><p class="eyebrow">Living Archive</p><h2>This Page Will Keep Growing</h2><p>Future Fantomah releases can be added here without turning the main Comics catalogue into an issue-by-issue list. New editions, restoration notes, selected historical art, and additional reference material can all live under the Fantomah archive.</p></section>
 </section></main><footer><span>ALTWORLD COMICS</span><span>Old tales. New adventures. Different worlds.</span></footer><script src="/footer.js"></script>
 </body></html>
