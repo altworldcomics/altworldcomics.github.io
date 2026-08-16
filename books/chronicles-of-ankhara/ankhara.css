@@ -107,3 +107,105 @@ footer{border-top-color:#203247!important;color:#718196!important}
 .story-list,.character-list,.book-list{margin-top:26px;margin-bottom:56px}
 .story-page,.character-sheet{margin-top:28px;margin-bottom:56px}
 .character-select-header{margin:34px auto 22px}
+
+
+/* =========================================================
+   ANKHARA FINAL TYPOGRAPHY BALANCE
+   Overrides large inherited work.css type on Ankhara pages.
+   ========================================================= */
+
+/* Main universe header */
+.ankhara-hero h1{
+  font-size:26px;
+  line-height:1.08;
+}
+.ankhara-hero .deck{
+  font-size:15px;
+  line-height:1.55;
+  max-width:760px;
+}
+
+/* Generic content sections inherited from work.css */
+.work-section h2{
+  font-size:22px;
+  line-height:1.15;
+  margin:0 0 12px;
+}
+.work-section h3{
+  font-size:18px;
+  line-height:1.2;
+  margin:18px 0 7px;
+}
+.work-section p,
+.work-section li{
+  font-size:15px;
+  line-height:1.65;
+}
+
+/* Ankhara index / story / character titles */
+.story-page h1,
+.character-copy h1{
+  font-size:26px;
+  line-height:1.08;
+}
+.character-role{
+  font-size:16px;
+}
+.character-select-header h1{
+  font-size:25px;
+}
+
+/* Cards and secondary headings */
+.ankhara-card h2,
+.index-card h2,
+.appears-in h2{
+  font-size:20px;
+}
+.ankhara-card h3,
+.index-card h3{
+  font-size:18px;
+}
+.ankhara-card p,
+.index-card p{
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* Slightly tighter content rhythm */
+.work-section{
+  padding:22px 0;
+}
+.story-page,
+.character-sheet{
+  margin-top:24px;
+}
+.ankhara-hero{
+  margin-top:26px;
+  margin-bottom:20px;
+}
+
+@media(max-width:850px){
+  .ankhara-hero h1,
+  .story-page h1,
+  .character-copy h1{
+    font-size:24px;
+  }
+  .work-section h2{
+    font-size:21px;
+  }
+  .work-section p,
+  .work-section li{
+    font-size:15px;
+  }
+}
+
+@media(max-width:520px){
+  .ankhara-hero h1,
+  .story-page h1,
+  .character-copy h1{
+    font-size:22px;
+  }
+  .character-select-header h1{
+    font-size:22px;
+  }
+}
