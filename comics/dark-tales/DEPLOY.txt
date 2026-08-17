@@ -1,0 +1,19 @@
+DARK TALES UPDATE
+Upload the contents of this package into:
+comics/dark-tales/
+
+REPLACE:
+- comics/dark-tales/index.html
+
+ADD:
+- comics/dark-tales/dark-tales.css
+- comics/dark-tales/lore/index.html
+- comics/dark-tales/characters/index.html
+- comics/dark-tales/characters/little-red-riding-hood/index.html
+- comics/dark-tales/characters/big-bad-wolf/index.html
+- comics/dark-tales/issues/index.html
+
+KEEP:
+- comics/dark-tales/little-red-riding-hood/ (existing Issue #1 detail page)
+
+All image references point to files already present in /images/.
