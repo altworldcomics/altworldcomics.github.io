@@ -1,0 +1,45 @@
+ALTWORLD COMICS — STABLE v4 DEPLOYMENT
+
+Upload the contents of this package into the repository root and allow matching files to be replaced.
+
+REPLACE:
+- /brand-theme.css
+- /footer.js
+- /index.html
+- /sitemap.xml
+- /books/chronicles-of-ankhara/ankhara.css
+- /books/chronicles-of-ankhara/index.html
+- /comics/dark-tales/dark-tales.css
+- /comics/dark-tales/index.html
+- /comics/dark-tales/lore/index.html
+- /comics/dark-tales/characters/index.html
+- /comics/dark-tales/characters/little-red-riding-hood/index.html
+- /comics/dark-tales/characters/big-bad-wolf/index.html
+- /comics/dark-tales/issues/index.html
+- /comics/dark-tales/little-red-riding-hood/index.html
+
+KEEP AS-IS:
+- /styles.css
+- /work.css
+- /app.js
+- /data.json
+- /admin.html
+- /robots.txt
+- /books/knowall/
+- all existing Ankhara HTML pages not listed above
+- /comics/fantomah/
+- /images/ (IMPORTANT)
+
+Why unchanged pages do not need edits:
+- Generic pages already load work.css + brand-theme.css.
+- Existing Ankhara subpages already load ankhara.css.
+- The new central CSS architecture therefore fixes them without per-page patches.
+
+After GitHub Pages deploys, check:
+1. root Home / Books / Comics / Store / About
+2. KnowAll
+3. Fantomah and both issue pages
+4. Ankhara Home / Lore / Characters / Books and at least one character + one lore detail
+5. Dark Tales Home / Lore / Characters / both character details / Issues / Issue #1
+
+Only after verification, follow CLEANUP_AFTER_UPLOAD.txt.

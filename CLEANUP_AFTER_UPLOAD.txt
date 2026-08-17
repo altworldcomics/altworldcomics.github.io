@@ -1,0 +1,18 @@
+CLEANUP AFTER STABLE v4 IS VERIFIED
+
+These files become obsolete under the new architecture and can be deleted AFTER the new deployment is confirmed working:
+
+1. /books/chronicles-of-ankhara/ankhara-home.css
+   Reason: merged into ankhara.css.
+
+2. /comics/dark-tales/final-fixes.css
+   Reason: merged into dark-tales.css.
+
+3. /books/chronicles-of-ankhara/DEPLOY.txt
+   Reason: old temporary deployment note.
+
+4. /comics/dark-tales/DEPLOY.txt
+   Reason: old temporary deployment note.
+
+Do NOT delete images yet.
+A separate asset-reference audit should be done after the stable deployment before removing image files.

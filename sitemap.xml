@@ -2,10 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://altworldcomics.github.io/</loc></url>
   <url><loc>https://altworldcomics.github.io/books/knowall/</loc></url>
+
   <url><loc>https://altworldcomics.github.io/books/chronicles-of-ankhara/</loc></url>
-  <url><loc>https://altworldcomics.github.io/books/chronicles-of-ankhara/stories/</loc></url>
-  <url><loc>https://altworldcomics.github.io/books/chronicles-of-ankhara/stories/origins-of-ankhara/</loc></url>
-  <url><loc>https://altworldcomics.github.io/books/chronicles-of-ankhara/stories/the-modern-ankhara/</loc></url>
+  <url><loc>https://altworldcomics.github.io/books/chronicles-of-ankhara/lore/</loc></url>
+  <url><loc>https://altworldcomics.github.io/books/chronicles-of-ankhara/lore/origins-of-ankhara/</loc></url>
+  <url><loc>https://altworldcomics.github.io/books/chronicles-of-ankhara/lore/the-modern-ankhara/</loc></url>
   <url><loc>https://altworldcomics.github.io/books/chronicles-of-ankhara/characters/</loc></url>
   <url><loc>https://altworldcomics.github.io/books/chronicles-of-ankhara/characters/tuth/</loc></url>
   <url><loc>https://altworldcomics.github.io/books/chronicles-of-ankhara/characters/nisha/</loc></url>
@@ -17,9 +18,16 @@
   <url><loc>https://altworldcomics.github.io/books/chronicles-of-ankhara/characters/shadow/</loc></url>
   <url><loc>https://altworldcomics.github.io/books/chronicles-of-ankhara/books/</loc></url>
   <url><loc>https://altworldcomics.github.io/books/chronicles-of-ankhara/quest-for-the-godkiller/</loc></url>
+
   <url><loc>https://altworldcomics.github.io/comics/fantomah/</loc></url>
   <url><loc>https://altworldcomics.github.io/comics/fantomah/issue-0/</loc></url>
   <url><loc>https://altworldcomics.github.io/comics/fantomah/issue-1/</loc></url>
+
   <url><loc>https://altworldcomics.github.io/comics/dark-tales/</loc></url>
+  <url><loc>https://altworldcomics.github.io/comics/dark-tales/lore/</loc></url>
+  <url><loc>https://altworldcomics.github.io/comics/dark-tales/characters/</loc></url>
+  <url><loc>https://altworldcomics.github.io/comics/dark-tales/characters/little-red-riding-hood/</loc></url>
+  <url><loc>https://altworldcomics.github.io/comics/dark-tales/characters/big-bad-wolf/</loc></url>
+  <url><loc>https://altworldcomics.github.io/comics/dark-tales/issues/</loc></url>
   <url><loc>https://altworldcomics.github.io/comics/dark-tales/little-red-riding-hood/</loc></url>
 </urlset>
