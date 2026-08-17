@@ -37,7 +37,7 @@
 .character-select-card:hover .character-select-name,.character-select-card:focus-visible .character-select-name{color:#f1d989;text-shadow:0 0 12px rgba(215,184,92,.18)}
 .character-select-card:focus-visible{outline:none}
 @media(max-width:900px){.character-select-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.character-select-header h1{font-size:46px}}
-@media(max-width:520px){.character-select-grid{gap:14px}.character-select-name{font-size:17px;margin-top:8px}.character-select-header{margin-top:30px}.character-select-header h1{font-size:28px}}
+@media(max-width:520px){.character-select-grid{gap:14px}.character-select-name{font-size:17px;margin-top:8px}.character-select-header{margin-top:30px}.character-select-header h1{font-size:38px}}
 
 /* AltWorld Comics publisher chrome — blue / steel identity.
    Ankhara content itself intentionally keeps its gold fantasy palette. */
@@ -57,402 +57,58 @@ footer{border-top-color:#203247!important;color:#718196!important}
 .ankhara-subnav a{font-size:10px;padding:7px 10px}
 
 .ankhara-hero{margin-top:32px}
-.ankhara-hero h1{font-size:30px;line-height:1;margin-bottom:11px}
-.ankhara-hero .deck{font-size:15px;line-height:1.6}
+.ankhara-hero h1{font-size:46px;line-height:1;margin-bottom:11px}
+.ankhara-hero .deck{font-size:16px;line-height:1.6}
 .ankhara-kicker{font-size:10px}
 
 .ankhara-card{padding:21px;min-height:205px}
-.ankhara-card h2{font-size:21px}
+.ankhara-card h2{font-size:24px}
 .ankhara-card h3{font-size:19px}
 .ankhara-card p{font-size:14px;line-height:1.6}
 
 .index-card{padding:21px}
-.index-card h2{font-size:21px}
+.index-card h2{font-size:24px}
 .index-card h3{font-size:19px}
 .index-card p{font-size:14px;line-height:1.6}
 
-.story-page h1{font-size:28px;line-height:1.04}
+.story-page h1{font-size:40px;line-height:1.04}
 .story-page .lede{font-size:16px;line-height:1.6}
 .story-page p{font-size:15px;line-height:1.75}
 .story-note{font-size:14px}
 
-.character-copy h1{font-size:30px;line-height:1}
-.character-role{font-size:17px}
+.character-copy h1{font-size:42px;line-height:1}
+.character-role{font-size:18px}
 .character-copy p{font-size:15px;line-height:1.7}
 .character-meta dt{font-size:9px}
 .character-meta dd{font-size:14px}
-.appears-in h2{font-size:20px}
+.appears-in h2{font-size:23px}
 
-.character-select-header h1{font-size:28px}
-.character-select-name{font-size:17px}
+.character-select-header h1{font-size:38px}
+.character-select-name{font-size:18px}
 
 .sequence-name{font-size:14px}
 .sequence-label{font-size:8px}
 .sequence-index{font-size:9px}
 
 @media(max-width:850px){
-  .character-copy h1,.story-page h1,.ankhara-hero h1{font-size:26px}
+  .character-copy h1,.story-page h1,.ankhara-hero h1{font-size:34px}
   .ankhara-hero .deck{font-size:15px}
 }
 @media(max-width:520px){
-  .character-select-header h1{font-size:24px}
+  .character-select-header h1{font-size:30px}
   .character-select-name{font-size:15px}
-  .character-copy h1,.story-page h1,.ankhara-hero h1{font-size:24px}
+  .character-copy h1,.story-page h1,.ankhara-hero h1{font-size:31px}
 }
 
-
-/* Compact vertical rhythm */
-.ankhara-hero{margin-top:28px;margin-bottom:22px}
-.ankhara-grid{margin-top:24px;margin-bottom:56px}
-.story-list,.character-list,.book-list{margin-top:26px;margin-bottom:56px}
-.story-page,.character-sheet{margin-top:28px;margin-bottom:56px}
-.character-select-header{margin:34px auto 22px}
-
-
-/* =========================================================
-   ANKHARA FINAL TYPOGRAPHY BALANCE
-   Overrides large inherited work.css type on Ankhara pages.
-   ========================================================= */
-
-/* Main universe header */
-.ankhara-hero h1{
-  font-size:26px;
-  line-height:1.08;
-}
-.ankhara-hero .deck{
-  font-size:15px;
-  line-height:1.55;
-  max-width:760px;
-}
-
-/* Generic content sections inherited from work.css */
-.work-section h2{
-  font-size:22px;
-  line-height:1.15;
-  margin:0 0 12px;
-}
-.work-section h3{
-  font-size:18px;
-  line-height:1.2;
-  margin:18px 0 7px;
-}
-.work-section p,
-.work-section li{
-  font-size:15px;
-  line-height:1.65;
-}
-
-/* Ankhara index / story / character titles */
-.story-page h1,
-.character-copy h1{
-  font-size:26px;
-  line-height:1.08;
-}
-.character-role{
-  font-size:16px;
-}
-.character-select-header h1{
-  font-size:25px;
-}
-
-/* Cards and secondary headings */
-.ankhara-card h2,
-.index-card h2,
-.appears-in h2{
-  font-size:20px;
-}
-.ankhara-card h3,
-.index-card h3{
-  font-size:18px;
-}
-.ankhara-card p,
-.index-card p{
-  font-size:14px;
-  line-height:1.6;
-}
-
-/* Slightly tighter content rhythm */
-.work-section{
-  padding:22px 0;
-}
-.story-page,
-.character-sheet{
-  margin-top:24px;
-}
-.ankhara-hero{
-  margin-top:26px;
-  margin-bottom:20px;
-}
-
-@media(max-width:850px){
-  .ankhara-hero h1,
-  .story-page h1,
-  .character-copy h1{
-    font-size:24px;
-  }
-  .work-section h2{
-    font-size:21px;
-  }
-  .work-section p,
-  .work-section li{
-    font-size:15px;
-  }
-}
-
-@media(max-width:520px){
-  .ankhara-hero h1,
-  .story-page h1,
-  .character-copy h1{
-    font-size:22px;
-  }
-  .character-select-header h1{
-    font-size:22px;
-  }
-}
-
-
-/* =========================================================
-   ANKHARA HOME — final compact content scale
-   ========================================================= */
-.work-body{
-  width:min(90vw,980px);
-  margin:24px auto 52px;
-}
-
-.work-section h2{
-  font-size:18px;
-  line-height:1.2;
-  margin:0 0 10px;
-}
-
-.work-section p,
-.work-section li{
-  font-size:14px;
-  line-height:1.6;
-}
-
-.ankhara-card h2,
-.index-card h2,
-.appears-in h2{
-  font-size:18px;
-  line-height:1.2;
-}
-
-.ankhara-card h3,
-.index-card h3{
-  font-size:17px;
-}
-
-.ankhara-card p,
-.index-card p{
-  font-size:13px;
-  line-height:1.55;
-}
-
-.ankhara-card{
-  padding:20px;
-  min-height:190px;
-}
-
-@media(max-width:850px){
-  .work-section h2{font-size:18px}
-  .work-section p,
-  .work-section li{font-size:14px}
-}
-
-@media(max-width:520px){
-  .work-section h2{font-size:17px}
-  .ankhara-card h2,
-  .index-card h2{font-size:17px}
-}
-
-
-/* =========================================================
-   GLOBAL HEADER MATCH — same scale as main AltWorld site
-   ========================================================= */
-.topbar .brand-wrap span{
-  font-size:19px;
-}
-
-.topbar .nav-link{
-  font-size:15px;
-  padding:9px 15px;
-}
-
-@media(max-width:860px){
-  .topbar .brand-wrap span{font-size:17px}
-  .topbar .nav-link{font-size:14px}
-}
-
-@media(max-width:560px){
-  .topbar .nav-link{font-size:13px}
-}
-
-
-/* =========================================================
-   ALTWORLD PUBLISHER FOOTER
-   ========================================================= */
-footer{
-  width:min(92vw,1180px);
-  margin:64px auto 0;
-  padding:24px 0 20px;
-  border-top:1px solid #203247;
-  display:grid;
-  grid-template-columns:42px auto 1fr;
-  grid-template-areas:
-    "logo brand tagline"
-    "legal legal legal";
-  align-items:center;
-  column-gap:14px;
-  row-gap:18px;
-  color:#718196;
-  font-family:Arial,sans-serif;
-  font-size:12px;
-}
-
-footer::before{
-  content:"";
-  grid-area:logo;
-  width:42px;
-  height:42px;
-  border-radius:50%;
-  background:url("/images/altworld-comics-logo.jpg") center/cover no-repeat;
-  box-shadow:0 0 0 1px rgba(76,151,255,.20);
-}
-
-footer span:first-child{
-  grid-area:brand;
-  color:#dfe6ee;
-  font-size:14px;
-  font-weight:800;
-  letter-spacing:1.4px;
-  white-space:nowrap;
-}
-
-footer span:last-child{
-  grid-area:tagline;
-  justify-self:end;
-  color:#7f8fa2;
-  font-size:12px;
-  letter-spacing:.3px;
-  text-align:right;
-}
-
-footer::after{
-  content:"© 2026 AltWorld Comics · Independent publishing";
-  grid-area:legal;
-  display:block;
-  padding-top:15px;
-  border-top:1px solid rgba(76,151,255,.14);
-  color:#566679;
-  font-size:10px;
-  letter-spacing:.4px;
-  text-transform:uppercase;
-}
-
-@media(max-width:700px){
-  footer{
-    grid-template-columns:42px 1fr;
-    grid-template-areas:
-      "logo brand"
-      "logo tagline"
-      "legal legal";
-    row-gap:5px;
-    margin-top:48px;
-  }
-
-  footer span:last-child{
-    justify-self:start;
-    text-align:left;
-    font-size:11px;
-  }
-
-  footer::after{
-    margin-top:12px;
-  }
-}
-
-
-/* =========================================================
-   SOCIAL FOOTER ICONS
-   ========================================================= */
-footer.altworld-footer{
-  grid-template-columns:42px auto 1fr auto;
-  grid-template-areas:
-    "logo brand social tagline"
-    "legal legal legal legal";
-}
-
-footer .footer-social{
-  grid-area:social;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:9px;
-  padding:0 18px;
-}
-
-footer .footer-social a{
-  width:34px;
-  height:34px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  border:1px solid rgba(116,147,181,.30);
-  border-radius:50%;
-  color:#8798aa;
-  background:rgba(255,255,255,.018);
-  text-decoration:none;
-  transition:
-    color .18s ease,
-    border-color .18s ease,
-    background .18s ease,
-    transform .18s ease,
-    box-shadow .18s ease;
-}
-
-footer .footer-social a:hover,
-footer .footer-social a:focus-visible{
-  color:#65a9ff;
-  border-color:rgba(76,151,255,.70);
-  background:rgba(22,119,255,.09);
-  transform:translateY(-2px);
-  box-shadow:0 7px 18px rgba(0,79,180,.14);
-  outline:none;
-}
-
-footer .footer-social svg{
-  width:16px;
-  height:16px;
-  display:block;
-  fill:currentColor;
-}
-
-@media(max-width:800px){
-  footer.altworld-footer{
-    grid-template-columns:42px 1fr auto;
-    grid-template-areas:
-      "logo brand social"
-      "logo tagline tagline"
-      "legal legal legal";
-  }
-  footer .footer-social{
-    justify-content:flex-end;
-    padding:0;
-  }
-}
-
-@media(max-width:520px){
-  footer.altworld-footer{
-    grid-template-columns:42px 1fr;
-    grid-template-areas:
-      "logo brand"
-      "logo tagline"
-      "social social"
-      "legal legal";
-  }
-  footer .footer-social{
-    justify-content:flex-start;
-    padding-top:12px;
-  }
-}
+/* Lore visual navigation */
+.lore-visual-list{width:min(100%,900px);margin:8px auto 64px;display:grid;gap:24px}
+.lore-visual-card{position:relative;display:block;overflow:hidden;border:1px solid rgba(215,184,92,.30);border-radius:14px;background:#080705;aspect-ratio:16/7;text-decoration:none;box-shadow:0 16px 38px rgba(0,0,0,.34);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.lore-visual-card img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .3s ease,filter .3s ease}
+.lore-visual-card::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,2,1,.88) 0%,rgba(3,2,1,.58) 38%,rgba(3,2,1,.08) 72%),linear-gradient(0deg,rgba(3,2,1,.38),transparent 55%)}
+.lore-visual-overlay{position:absolute;z-index:2;left:34px;bottom:30px;right:34px;display:flex;flex-direction:column;align-items:flex-start}
+.lore-visual-overlay .ankhara-kicker{margin-bottom:7px}
+.lore-visual-overlay strong{color:#f3ead6;font-family:Georgia,serif;font-size:30px;line-height:1.08}
+.lore-visual-overlay em{margin-top:8px;color:#d8ccb0;font-family:Georgia,serif;font-size:15px}
+.lore-visual-card:hover,.lore-visual-card:focus-visible{transform:translateY(-3px);border-color:rgba(215,184,92,.68);box-shadow:0 21px 44px rgba(0,0,0,.45);outline:none}
+.lore-visual-card:hover img,.lore-visual-card:focus-visible img{transform:scale(1.018);filter:brightness(1.06)}
+@media(max-width:650px){.lore-visual-list{gap:16px}.lore-visual-card{aspect-ratio:4/3}.lore-visual-overlay{left:20px;right:20px;bottom:20px}.lore-visual-overlay strong{font-size:23px}.lore-visual-overlay em{font-size:13px}}
