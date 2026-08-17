@@ -35,3 +35,21 @@ h1,h2,h3{line-height:1.12;margin-top:0}h1{font-size:42px}h2{font-size:32px}h3{fo
 .lore-body{max-width:820px;margin:0 auto;padding:34px 0 70px}.lore-body .wide-art{width:100%;border-radius:13px;border:1px solid #55361f;margin-bottom:30px}
 footer{border-top:1px solid #1f2730;color:#8290a0;padding:28px;text-align:center;font-family:Arial,sans-serif;font-size:13px}
 @media(max-width:800px){.topbar{padding:12px 16px;gap:15px;flex-direction:column}.nav{gap:18px;flex-wrap:wrap;justify-content:center}.home-intro,.profile,.issue-grid{grid-template-columns:1fr}.home-intro img{max-width:430px;margin:auto}.portal-grid{grid-template-columns:1fr}.portal-card{aspect-ratio:16/10}.character-grid{grid-template-columns:1fr}.dt-nav{gap:16px;flex-wrap:wrap}.facts{grid-template-columns:120px 1fr}h1{font-size:34px}}
+
+
+/* Final Dark Tales tweaks */
+.character-grid{
+  max-width:760px;
+  margin:0 auto;
+  gap:24px;
+}
+.character-card img{
+  aspect-ratio:4/5;
+  height:360px;
+  object-fit:cover;
+  object-position:center top;
+}
+@media(max-width:800px){
+  .character-grid{max-width:430px}
+  .character-card img{height:auto}
+}
