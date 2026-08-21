@@ -8,6 +8,15 @@
   },
   "posts": [
     {
+      "title": "How I Learned to Build Ankhara",
+      "date": "2026-08-21",
+      "image": "images/how-i-learned-to-build-ankhara.jpg",
+      "excerpt": "Cartoons, comics, fantasy novels, games, failed universes, and the long road that eventually became Ankhara.",
+      "body": "Ankhara did not begin with a single idea. It grew out of decades of stories, games, experiments, abandoned universes, and lessons about what fantasy could be — and what a fictional world needs in order to work. This five-part story follows that journey from morning cartoons and Tolkien to Warcraft, Terry Pratchett, Neil Gaiman, the original AltWorld, AltWorld Cinematics, AltWorld Comics, and finally Chronicles of Ankhara.",
+      "linkText": "Read the Story",
+      "link": "about/ankhara-story/"
+    },
+    {
       "title": "Chronicles of Ankhara: Quest for the Godkiller Is Out Now",
       "date": "2026-08-12",
       "image": "images/chronicles-of-ankhara-out-now.jpg",
