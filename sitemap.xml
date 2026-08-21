@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://altworldcomics.github.io/</loc></url>
-  <url><loc>https://altworldcomics.github.io/books/knowall/</loc></url>
+  <url><loc>https://altworldcomics.github.io/about/ankhara-story/</loc></url>
+  <url><loc>https://altworldcomics.github.io/about/ankhara-story/part-2/</loc></url>
+  <url><loc>https://altworldcomics.github.io/about/ankhara-story/part-3/</loc></url>
+  <url><loc>https://altworldcomics.github.io/about/ankhara-story/part-4/</loc></url>
+  <url><loc>https://altworldcomics.github.io/about/ankhara-story/part-5/</loc></url>
 
+  <url><loc>https://altworldcomics.github.io/books/knowall/</loc></url>
   <url><loc>https://altworldcomics.github.io/books/chronicles-of-ankhara/</loc></url>
   <url><loc>https://altworldcomics.github.io/books/chronicles-of-ankhara/lore/</loc></url>
   <url><loc>https://altworldcomics.github.io/books/chronicles-of-ankhara/lore/origins-of-ankhara/</loc></url>
