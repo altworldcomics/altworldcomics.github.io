@@ -10,3 +10,6 @@
 
 /* Author biography: compact portrait at top left, books below */
 .author-profile{grid-template-columns:112px minmax(0,1fr);gap:24px;max-width:100%;padding:30px 0 20px;align-items:start}.author-profile .author-portrait{width:112px;height:112px;max-width:112px;aspect-ratio:1;object-fit:cover;border-radius:50%;border:1px solid var(--line)}.author-profile h2{font-size:21px;margin:0 0 10px}.author-profile p{line-height:1.7;margin-bottom:13px}.author-profile+.section{padding-top:24px;border-top:1px solid var(--line)}@media(max-width:520px){.author-profile{grid-template-columns:80px minmax(0,1fr);gap:16px}.author-profile .author-portrait{width:80px;height:80px;max-width:80px}.author-profile h2{font-size:19px}}
+
+/* Four balanced covers in Latest Releases */
+#latest{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}#latest .publication img{aspect-ratio:2/3;object-fit:contain}@media(max-width:650px){#latest{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 14px}}
