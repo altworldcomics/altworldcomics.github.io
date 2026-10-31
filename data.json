@@ -167,6 +167,42 @@
       "detailUrl": "comics/fantomah/issue-1/",
       "link": "https://a.co/d/07fZKxeq",
       "brand": "fantomah"
+    },
+    {
+      "id": "vampire-count",
+      "title": "The Vampire Count",
+      "type": "book",
+      "collection": "Classics of Ankhara",
+      "genre": "Gothic Fantasy",
+      "status": "Out Now",
+      "image": "images/the-vampire-count-cover.jpg",
+      "description": "A reimagining of the classic vampire tale, set within the world of Ankhara.",
+      "detailUrl": "books/the-vampire-count/",
+      "link": ""
+    },
+    {
+      "id": "scarlett-hood",
+      "title": "The Scarlett Hood",
+      "type": "book",
+      "collection": "Classics of Ankhara",
+      "genre": "Dark Fantasy",
+      "status": "Out Now",
+      "image": "images/the-scarlett-hood-cover.jpg",
+      "description": "A new take on the tale of Little Red Riding Hood, following a young archer on her own path.",
+      "detailUrl": "books/the-scarlett-hood/",
+      "link": ""
+    },
+    {
+      "id": "pointy-hats",
+      "title": "Pointy Hats: Survivors of the Wild West",
+      "type": "book",
+      "collection": "Original Fiction",
+      "genre": "Post-apocalyptic Western",
+      "status": "Coming Soon",
+      "image": "images/pointy-hats-cover.jpg",
+      "description": "A post-apocalyptic Western story of survival, oppression and the road beyond Trucegreet.",
+      "detailUrl": "",
+      "link": ""
     }
   ],
   "about": {
@@ -175,5 +211,12 @@
     "contact": "altworldcomics@gmail.com",
     "x": "https://x.com/altworldcomix",
     "instagram": "https://www.instagram.com/altworldcomics/"
-  }
+  },
+  "gallery": [
+    {
+      "title": "Ashka — Chronicles of Ankhara",
+      "image": "images/ashka-by-catarium.png",
+      "credit": "Artwork by Catarium"
+    }
+  ]
 }
