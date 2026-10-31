@@ -182,15 +182,15 @@
     },
     {
       "id": "scarlett-hood",
-      "title": "The Scarlett Hood",
+      "title": "Classics of Ankhara: The Scarlett Hood",
       "type": "book",
       "collection": "Classics of Ankhara",
       "genre": "Dark Fantasy",
       "status": "Out Now",
       "image": "images/the-scarlett-hood-cover.jpg",
-      "description": "A new take on the tale of Little Red Riding Hood, following a young archer on her own path.",
+      "description": "A new threat has come to the Great Forest. A vicious werewolf is on the loose, leaving death and destruction in his wake. And the quiet village of Holzen lies directly in his path.",
       "detailUrl": "books/the-scarlett-hood/",
-      "link": ""
+      "link": "https://www.amazon.com/dp/B0HNGJWPVM"
     },
     {
       "id": "pointy-hats",
