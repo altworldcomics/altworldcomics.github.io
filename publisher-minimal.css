@@ -7,3 +7,6 @@
 
 /* Dedicated author profile */
 .author h2 a:hover{color:var(--blue)}.author>a img{display:block}.author-profile{display:grid;grid-template-columns:190px minmax(0,1fr);gap:clamp(22px,5vw,54px);padding:34px 0 10px;align-items:start;max-width:850px}.author-portrait{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px}.author-profile h2{margin:0 0 12px}.author-profile p{margin:0 0 16px;color:#475568;line-height:1.75}.author-external,.back-link{color:var(--blue)}.intro .back-link{font-size:14px}.intro p:has(.back-link){margin-bottom:14px}@media(max-width:520px){.author-profile{grid-template-columns:1fr}.author-portrait{max-width:150px}}
+
+/* Author biography: compact portrait at top left, books below */
+.author-profile{grid-template-columns:112px minmax(0,1fr);gap:24px;max-width:100%;padding:30px 0 20px;align-items:start}.author-profile .author-portrait{width:112px;height:112px;max-width:112px;aspect-ratio:1;object-fit:cover;border-radius:50%;border:1px solid var(--line)}.author-profile h2{font-size:21px;margin:0 0 10px}.author-profile p{line-height:1.7;margin-bottom:13px}.author-profile+.section{padding-top:24px;border-top:1px solid var(--line)}@media(max-width:520px){.author-profile{grid-template-columns:80px minmax(0,1fr);gap:16px}.author-profile .author-portrait{width:80px;height:80px;max-width:80px}.author-profile h2{font-size:19px}}
