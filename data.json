@@ -170,15 +170,15 @@
     },
     {
       "id": "vampire-count",
-      "title": "The Vampire Count",
+      "title": "Classics of Ankhara: The Vampire Count",
       "type": "book",
       "collection": "Classics of Ankhara",
       "genre": "Gothic Fantasy",
       "status": "Out Now",
       "image": "images/the-vampire-count-cover.jpg",
-      "description": "A reimagining of the classic vampire tale, set within the world of Ankhara.",
+      "description": "His ancestral castle still stands above the forgotten city of Varkova, but almost everything Drake once knew is gone. His wife is dead. His name has become a memory. And the world has moved on without him.",
       "detailUrl": "books/the-vampire-count/",
-      "link": ""
+      "link": "https://www.amazon.com/dp/B0HKY6XXGQ"
     },
     {
       "id": "scarlett-hood",
