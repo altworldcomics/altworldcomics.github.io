@@ -107,6 +107,18 @@
   },
   "store": [
     {
+      "id": "baia",
+      "title": "Baia: The Warrior of Altai",
+      "type": "book",
+      "collection": "Illustrated Adaptations",
+      "genre": "Illustrated Fantasy / Folklore",
+      "status": "Out Now",
+      "image": "images/baia-cover.jpg",
+      "description": "A young warrior and her magical horse journey into the Red Lands in an illustrated adventure inspired by Altai folklore.",
+      "detailUrl": "books/baia/",
+      "link": "https://www.amazon.com/dp/B0HS79BHY6"
+    },
+    {
       "id": "godkiller",
       "title": "Chronicles of Ankhara: Quest for the Godkiller",
       "type": "book",
